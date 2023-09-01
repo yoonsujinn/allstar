@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>css_grid</title>
+    <link rel="stylesheet" href="../../css/study/grid.css">
+  </head>
+  <body>
+        <!-- https://heropy.blog/2019/08/17/css-grid/ -->
+        <!-- https://studiomeal.com/archives/533 -->
+      <h3> CSS Grid</h3>
+      <p>
+        <b>css grid는 2차원 행과 열 의 레이아웃 시스템을
+        제공한다.</b><br/><br/>
+        <img src="../../img/grid.jpg" alt="gr"><br/><br/>
+
+        <b>grid container</b>:display:grid를 적용하는 grid의 전체영역<br/>
+        grid 컨테이너 안의 요소들이 grid 규칙이 영향을 받아 정렬된다고 생각하면 됨.<br/><br/>
+
+
+        <b>grid item</b>:grid 컨테이너의 자식요소들.<br/><br/>
+
+        <b>grid track</b>:행(row) 또는 열(column)<br/><br/>
+
+        <b>grid cell</b>:grid의 한 칸을 가리키는 말임.<br/>
+        div와 같은 실제 html요소는 그리드아이템이고,<br/>
+        grid의 가상의 칸(틀?)임.<br/><br/>
+
+        <b>grid Line</b>:grid셀을 구분하는 선<br/>
+        <b>grid number</b>:grid라인의 각 번호<br/>
+        <b>grid gap</b>:grid 셀 사이의 간격<br/>
+        <b>grid area</b>grid라인으로 둘러쌓인 사각형 영역 / 그리드셀의 집합
+
+      </p>
+      <h3>display</h3>
+    <p>
+      grid container에 필수로 작성해야하는 옵션.<br/>
+      <b>grid:</b>block특성의 grid container를 정의<br/>
+      <b>inrine-grid:</b>inline 특성의 container를 정의함.
+    </p>
+
+    <h3>grid-template-rows</h3>
+    <p>
+      명시적 행(track) 의 크기를 정의함.<br/>
+      line의 이름도 정의할 수 있음.<br/>
+      <b>fr</b>:(fraction,공간 비율) 단위를 설정할 수 있음.<br/>
+      <b>repeat()</b> 함수를 사용할 수 있음.<br/>
+      사용방법은 grid-temokate-columns 와 같음.<br/>
+    </p>
+
+    <h2>grid-template-rows</h2>
+    <h1>grid-template-rows: 50px 30px 60px;</h1>
+    <div class="grid_container grid_container_1">
+      <div class="grid_items items_1">1</div>
+      <div class="grid_items items_2">2</div>
+      <div class="grid_items items_3">3</div>
+      <div class="grid_items items_4">4</div>
+      <div class="grid_items items_5">5</div>
+    </div>
+
+    <h2>grid-template-rows:repeat()옵션</h2>
+    <p>repeat함수는 repeat(n,nnpx/%); 형식으로 사용</p>
+    <h1>		grid-template-rows: repeat(3, 100fr);</h1>
+    <div class="grid_container grid_container_2">
+      <div class="grid_items items_1">1</div>
+      <div class="grid_items items_2">2</div>
+      <div class="grid_items items_3">3</div>
+    </div>
+
+    <h2>grid-template-rows:repeat()옵션-2</h2>
+    <p>
+      repeat함수는 2번째 인수를 반복함.
+      grid_template_columns:repeat(4,1fr,2fr,3fr) 으로 사용하면<br/>
+      1fr 2fr 3fr 1fr 2fr 3fr 1fr 2fr 3fr 1fr 2fr 3fr;<br/>
+      위와 같은 반복 가능<br/>
+    </p>
+    <h1>
+    	-grid-template-rows: repeat(3, 30px 11px 30px);<br/>
+      -grid-template-columns:repeat(3, 40px);
+    </h1>
+      <div class="grid_container grid_container_3">
+        <div class="grid_items items_1">1</div>
+        <div class="grid_items items_2">2</div>
+        <div class="grid_items items_3">3</div>
+        <div class="grid_items items_4">1</div>
+        <div class="grid_items items_5">2</div>
+        <div class="grid_items items_6">3</div>
+        <div class="grid_items items_7">1</div>
+        <div class="grid_items items_8">2</div>
+        <div class="grid_items items_9">3</div>
+      </div>
+
+      <h3>gap , column-gap , gap</h3>
+      <p>그리드 셀 사이의 간격을 설정</p>
+      <p><b>row-gap:10px - row 간격<br/>
+      column-gap:20px - column-gap 간격</b><br/>
+      ie에서는 gap의 대체 속성이 없음.
+      </p>
+
+
+        <div class="grid_container grid_container_4">
+          <div class="grid_items items_1"></div>
+          <div class="grid_items items_2"></div>
+          <div class="grid_items items_3"></div>
+          <div class="grid_items items_4"></div>
+          <div class="grid_items items_5"></div>
+          <div class="grid_items items_6"></div>
+          <div class="grid_items items_7"></div>
+          <div class="grid_items items_8"></div>
+          <div class="grid_items items_9"></div>
+        </div>
+<br><br><br><br>
+  </body>
+</html>
