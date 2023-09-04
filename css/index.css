@@ -112,7 +112,7 @@ html, body{
 
 }
 
-.fage_1_wrap{
+.page_1_wrap{
 	width:100%;
 	height:100%;
 }
@@ -154,7 +154,7 @@ header ul li a{
   font-size: 22px;
 }
 
-.fages{
+.pages{
   width:100%;
   height:100%;
 	box-sizing:border-box;
@@ -164,23 +164,23 @@ header ul li a{
 
 
 
-#fage_1{
+#page_1{
   grid-template-rows: 1fr;
   grid-template-columns: 4fr 6fr;
 
 }
 
-#fage_2{
+#page_2{
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;
 }
 
-#fage_3{
+#page_3{
   grid-template-rows: 100%;
   grid-template-columns: 40% 60%;
 }
 
-#fage_4{
+#page_4{
   background:url("../img/index/main7.jpg");
   background-size: cover;
   place-items: center;
@@ -192,7 +192,7 @@ header ul li a{
 }
 
 
-#fage_4::before{
+#page_4::before{
   content: "";
   width: 100%;
   height: 100%;
@@ -204,7 +204,7 @@ header ul li a{
 }
 
 /* 페이지1 상세 */
-#fage_1_left > #mainimgwrap {
+#page_1_left > #mainimgwrap {
   width: 700px;
   height: 506px;
   position: relative;
@@ -213,7 +213,7 @@ header ul li a{
   left: 8%;
   transform: translate(0%, -50%);
 }
-#fage_1_left > #mainimgwrap > img{
+#page_1_left > #mainimgwrap > img{
   position: absolute;
 	transform-origin: center;
   animation-delay: 0s;
@@ -221,7 +221,7 @@ header ul li a{
 
 }
 
-#fage_1_left > #mainimgwrap > img:nth-child(1) {
+#page_1_left > #mainimgwrap > img:nth-child(1) {
   width: 600px;
   right: 0;
   top: 50%;
@@ -229,7 +229,7 @@ header ul li a{
 }
 
 
-#fage_1_left > #mainimgwrap > img:nth-child(2) {
+#page_1_left > #mainimgwrap > img:nth-child(2) {
   width: 63%;
   right: 11%;
   top: 9%;
@@ -246,7 +246,7 @@ header ul li a{
 	}
 }
 
-#fage_1_left > #mainimgwrap > img:nth-child(3) {
+#page_1_left > #mainimgwrap > img:nth-child(3) {
   width: 64%;
   right: 10%;
   top: 8%;
@@ -264,7 +264,7 @@ header ul li a{
 		transform: rotate(-180deg)
 	}
 }
-#fage_1_left > #mainimgwrap > img:nth-child(4) {
+#page_1_left > #mainimgwrap > img:nth-child(4) {
   width: 64%;
   right: 10%;
   top: 8%;
@@ -282,7 +282,7 @@ header ul li a{
 		transform: rotate(200deg)
 	}
 }
-#fage_1_left > #mainimgwrap > img:nth-child(5) {
+#page_1_left > #mainimgwrap > img:nth-child(5) {
   width: 64%;
   right: 10%;
   top: 8%;
@@ -301,7 +301,7 @@ header ul li a{
 	}
 }
 
-#fage_1_left > #mainimgwrap > img:nth-child(6) {
+#page_1_left > #mainimgwrap > img:nth-child(6) {
   width: 64%;
   right: 10%;
   top: 8%;
@@ -320,14 +320,14 @@ header ul li a{
 	}
 }
 
-#fage_1_left > #mainimgwrap > img:nth-child(7) {
+#page_1_left > #mainimgwrap > img:nth-child(7) {
   width: 34%;
   right: 25%;
   top: 52%;
   transform: translate(0, -50%);
 }
 
-#fage_1_right{
+#page_1_right{
   position: relative;
   display: flex;
   align-items: flex-start;
@@ -335,7 +335,7 @@ header ul li a{
   justify-content: center;
 }
 
-#fage_1_right > h2{
+#page_1_right > h2{
   color:#fff;
   padding: 0 0 0 150px;
   font-size: 49px;
@@ -344,7 +344,7 @@ header ul li a{
   font-weight: 300;
 
 }
-#fage_1_right > h1{
+#page_1_right > h1{
   letter-spacing: -0.7px;
   display: block;
   color: #757f8a;
@@ -357,7 +357,7 @@ header ul li a{
 }
 
 /* 페이지2 상세 */
-#fage_2_left{
+#page_2_left{
   display: grid;
   justify-items: center;
   align-items: center;
@@ -365,7 +365,7 @@ header ul li a{
   height: 100%;
 }
 
-#fage_2_left_wrap{
+#page_2_left_wrap{
   width: 92%;
   height: 80%;
   border-radius: 20px;
@@ -377,11 +377,11 @@ header ul li a{
   overflow-style: none;
 }
 
-#fage_2_left_wrap::-webkit-scrollbar {
+#page_2_left_wrap::-webkit-scrollbar {
     display: none; /* 크롬, 사파리, 오페라 */
 }
 
-#fage_2_right{
+#page_2_right{
   display: grid;
   justify-items: center;
   align-items: center;
@@ -389,7 +389,7 @@ header ul li a{
   height: 100%;
 }
 
-#fage_2_right_wrap{
+#page_2_right_wrap{
   width: 92%;
   height: 80%;
   border-radius: 20px;
@@ -409,30 +409,30 @@ header ul li a{
   "Workheader Workheader"; */
   align-items: center;
 }
-#fage_2_right_wrap .fage_2_icon{
+#page_2_right_wrap .page_2_icon{
   align-self:center;
   justify-self:center;
   width: 40px;
 }
-#fage_2_right_wrap .fage_2_icon_line{
+#page_2_right_wrap .page_2_icon_line{
   justify-self: center;
   align-self: center;
 }
-#fage_2_right_wrap #fage_2_icon_line_1{
+#page_2_right_wrap #page_2_icon_line_1{
   width: 3px;
   height: 102px;
 }
-#fage_2_right_wrap #fage_2_icon_line_2{
+#page_2_right_wrap #page_2_icon_line_2{
   width: 3px;
   height: 53px;
 }
-#fage_2_right_wrap #fage_2_icon_line_3{
+#page_2_right_wrap #page_2_icon_line_3{
   width: 3px;
   height: 179px;
 }
 
 
-#fage_2_right_wrap > h3 {
+#page_2_right_wrap > h3 {
   align-self: center;
   color: #fff;
   letter-spacing: 2px;
@@ -441,14 +441,14 @@ header ul li a{
   font-weight: 900;
 }
 
-#fage_2_right_wrap > ul.fage_2_Profile {
+#page_2_right_wrap > ul.page_2_Profile {
   display: grid;
   grid-template-columns: repeat(2, minmax(100px,auto));
   justify-content: start;
 
 }
 
-#fage_2_right_wrap > ul.fage_2_Profile > li{
+#page_2_right_wrap > ul.page_2_Profile > li{
   color: #fff;
   font-size: 20px;
   align-self: baseline;
@@ -456,12 +456,12 @@ header ul li a{
   line-height: 1.7;
 }
 
-#fage_2_right_wrap > .fage_2_Certificate {
+#page_2_right_wrap > .page_2_Certificate {
   width: 82%;
 
 }
 
-#fage_2_right_wrap > .fage_2_Certificate > div.C_icate_obj {
+#page_2_right_wrap > .page_2_Certificate > div.C_icate_obj {
   color: #fff;
   letter-spacing: 1px;
   font-size: 18px;
@@ -474,7 +474,7 @@ header ul li a{
   margin: 0 15px 0 0;
 }
 
-#fage_2_right_wrap > .fage_2_work {
+#page_2_right_wrap > .page_2_work {
   display: grid;
   grid-template-columns: repeat(2, minmax(100px,auto));
   justify-content: start;
@@ -483,7 +483,7 @@ header ul li a{
 
 }
 
-#fage_2_right_wrap > .fage_2_work > li {
+#page_2_right_wrap > .page_2_work > li {
   color: #fff;
   font-size: 18px;
   padding: 0 0 5px 0;
@@ -491,23 +491,23 @@ header ul li a{
 }
 
 /* 페이지3 상세 */
-#fage_3_left{
+#page_3_left{
   display: grid;
   justify-items: center;
   align-items:center;
 }
-#fage_3_left > img{
+#page_3_left > img{
   width: 600px;
 }
-#fage_3_right{
+#page_3_right{
 	background-color: #161b22;
   position: relative;
 }
-#fage_3_right > p{
+#page_3_right > p{
   color: #fff;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 100;
-  padding: 150px 0px 0 50px;
+  padding: 110px 0px 0 50px;
   box-sizing: border-box;
   font-size: 20px;
   line-height: 33px;
@@ -516,7 +516,7 @@ header ul li a{
 }
 
 
-#fage_3_right > .fage_3_right_tag{
+#page_3_right > .page_3_right_tag{
   width: 50%;
   padding: 50px 0px 0 50px;
   display: grid;
@@ -526,7 +526,7 @@ header ul li a{
   text-align: center;
 }
 
-#fage_3_right > .fage_3_right_tag > .Skill_obj{
+#page_3_right > .page_3_right_tag > .Skill_obj{
   color: #fff;
   letter-spacing: 1px;
   font-size: 20px;
@@ -538,7 +538,7 @@ header ul li a{
 
 }
 
-#fage_3_right > img{
+#page_3_right > img{
   width: 400px;
   position: absolute;
   left: 60%;
@@ -547,23 +547,23 @@ header ul li a{
 
 /* 페이지4 상세 */
 
-#fage_4 > .left_stars  {
+#page_4 > .left_stars  {
  position: relative;
  width: 471px;
  height: 335px;
- /* background: blue; */
  margin: 0 0 0 80px;
  background-image: url("../img/index/left_stars.png");
- display:none;
+  /* background-color: red;   */
 }
 
 
 
-#fage_4 .left_stars .left_stars_obj {
-position:absolute;
-width: 130px;
-height: 50px;
-/* background: rgba(255, 255, 255, 0.5); */
+#page_4 .left_stars .left_stars_obj {
+  position:absolute;
+  width: 144px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px;
 }
 
 .left_stars >a> .left_stars_obj > p{
@@ -574,13 +574,15 @@ height: 50px;
 
 
 .left_stars a #left_stars_obj_1 {
-  left: 16%;
+  left: 11%;
   top: 5%;
+  line-height: 2;
+
 }
 
 .left_stars a #left_stars_obj_2 {
-  top: 40%;
-  right: 15%;
+  top: 41%;
+  right: 14%;
   text-align: right;
 }
 .left_stars a #left_stars_obj_3 {
@@ -588,21 +590,21 @@ height: 50px;
   right: 57%;
 }
 
-#fage_4 > .page4_Portfolio {
+#page_4 > .page4_Portfolio {
   width: 700px;
   height: 600px;
   background: #010911;
   border: 2px solid #31323e;
 }
 
-#fage_4 > #page4_Portfolio_1 {
+#page_4 > #page4_Portfolio_1 {
   position: absolute;
   left: 50%;
   top: 10%;
   display: none;
 }
 
-#fage_4 > #page4_Portfolio_2 {
+#page_4 > #page4_Portfolio_2 {
   position: absolute;
   left: 22%;
   top: 65%;
@@ -610,14 +612,14 @@ height: 50px;
 
 /* 5page 시작 */
 
-#fage_5 {
+#page_5 {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 90px 2fr;
   background-color: #000;
   font-size: 32px;
 }
-#fage_5 > span{
+#page_5 > span{
   color:#fff;
   font-family: 'Mona Sans';
   display: inline-block;
@@ -625,49 +627,59 @@ height: 50px;
   align-self:center;
   justify-Self:right;
 }
-#fage_5 > .fage_5_left{
+#page_5 > .page_5_left{
   display: grid;
   justify-content: center;
   align-content: center;
   grid-template-rows: auto 12% auto;
 }
 
-#fage_5 > .fage_5_left > .fage_5_con{
+#page_5 > .page_5_left > .page_5_con{
   background: #000;
   border: 2px solid #fff;
   width: 715px;
   height: 131px;
   display: grid;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 1fr;
   position: relative;
   z-index: 990;
 }
-.fage_5_con > img {
-  width: 50px;
-  align-self: center;
-  justify-Self:center;
-}
-
-.fage_5_con  a{
-  display: block;
+.page_5_con  a{
+  width: 100%;
   color:#fff;
   align-self: center;
   font-family: 'Mona Sans';
+  display: grid;
+  grid-template-columns: 100px auto;
+  grid-template-rows: 1fr;
 }
 
-.fage_5_con  a p{
-  display: block;
-  color:#fff;
-  align-self: center;
-  font-family: 'Mona Sans';
-}
-
-#fage_5 > .fage_5_left > h3{
+.page_5_con > a#phon_logo{
   display: none;
 }
 
-#fage_5 > .fage_5_left > h2{
+.page_5_con > a > img {
+  align-self: center;
+  justify-Self:center;
+  display: block;
+  width: 55px;
+}
+
+
+
+.page_5_con  a p{
+  display: block;
+  color:#fff;
+  align-self: center;
+  font-family: 'Mona Sans';
+}
+
+#page_5 > .page_5_left > h3{
+  display: none;
+}
+
+#page_5 > .page_5_left > h2{
   display: block;
   color: #fff;
   align-self: center;
@@ -679,11 +691,11 @@ height: 50px;
 
 
 
-.fage_5_con_before{
+.page_5_con_before{
   position: relative;
   top: -83%;
   left: -5%;
   width: 715px;
   height: 131px;
-  background: url(../img/index/fage_5_con_after.png);
+  background: url(../img/index/page_5_con_after.png);
 }
