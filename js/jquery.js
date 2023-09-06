@@ -16,6 +16,38 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 
 
+    // page_4_li active_1 on off
+    document.addEventListener("DOMContentLoaded", function() {
+        const page_4_list = document.querySelectorAll('.page_4_li');
+
+
+        page_4_list.forEach((liElement) => {
+            liElement.addEventListener("click", function(e) {
+              page_4_list.forEach((otherLi) => {
+             otherLi.classList.remove('active_1');
+         });
+         // 클릭한 li 요소에 'active_1' 클래스를 추가합니다.
+         liElement.classList.add('active_1');
+            });
+          });
+        });
+    document.addEventListener("DOMContentLoaded", function() {
+    const pElements = document.querySelectorAll('#rec_4 p');
+
+    pElements.forEach((pElement) => {
+        pElement.addEventListener("click", function(e) {
+            // 모든 <p> 요소에서 'active_3' 클래스를 제거합니다.
+            pElements.forEach((otherP) => {
+                otherP.classList.remove('active_3');
+            });
+
+            // 클릭한 <p> 요소에 'active_3' 클래스를 추가합니다.
+            pElement.classList.add('active_3');
+        });
+    });
+});
+
+
 
     document.addEventListener('DOMContentLoaded', function() {
           //  DOMContentLoaded는 모든 html문서와 css가 로드가 된 후에 실행된다는 뜻이다.
@@ -23,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function(){
            // menu_a 클래스 저장
            var mobileSideMenu = document.querySelector('.mobile_side_menu');
            // mobile_side_menu 클래스 저장
-
            for (var i = 0; i < menuItems.length; i++) {
                menuItems[i].addEventListener('click', function(event) {
                  // addEventListener는 이벤트를 처리하는 메서드중 하나다.
@@ -34,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function(){
                    document.querySelector(target).scrollIntoView({
                        behavior: 'smooth'
                    });
-
                    // Hide the mobile_side_menu
                    document.querySelector('.mobile_side_menu').classList.remove('mobile_side_menu_on');
                    document.querySelector('.mobile_menu').classList.remove('mobile_menu_on');
@@ -43,35 +73,40 @@ document.addEventListener('DOMContentLoaded', function(){
        });
 
 
-    // event.deltaY 값은 스크롤 방향과 스크롤 양을 나타냅니다.
-    // event.deltaY > 0 일 때는 아래로 스크롤, event.deltaY < 0 일 때는 위로 스크롤입니다.
+// 한화면씩 이동하는 스크롤
+$(document).ready(function() {
+    var isAnimating = false; // 애니메이션이 실행 중인지 여부를 추적하는 플래그
 
-    var $html = $("html");
-    var page = 1;
-    var lastPage = $(".pages").length;
-    // 마지막페이지
+    $(window).on('mousewheel DOMMouseScroll', function(event) { // 스크롤 이벤트 핸들러 등록
+    event.preventDefault(); // 기본 스크롤 동작 막기
+    if (isAnimating) {return false;}// 애니메이션이 실행 중이면 종료
+
+    var page44 = document.getElementById("page_4"); // 요소를 ID로 선택
+    var elementHeight = page44.offsetHeight;
+    var screenHeight = window.innerHeight; // 화면 높이를 측정
+    var currentScrollTop = $(window).scrollTop(); // 현재 스크롤 위치 가져오기
 
 
+          var newScrollTop;
+          if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+              // 마우스 휠을 위로 스크롤했을 때
+              newScrollTop = currentScrollTop - elementHeight;
+              console.log(newScrollTop+"실제 이동되는 스크롤");
+              console.log(currentScrollTop+"현재스크롤위치");
+              console.log(elementHeight+"화면높이");
+          } else {
+              // 마우스 휠을 아래로 스크롤했을 때
+              newScrollTop = currentScrollTop + elementHeight;
+              console.log(newScrollTop+"실제 이동되는 스크롤");
+              console.log(currentScrollTop+"현재스크롤위치");
+              console.log(elementHeight+"화면높이");
+          }
 
-    window.addEventListener("wheel", function(e){
-    	e.preventDefault();
-    },{passive : false});
-    // 원래 마우스 휠 이벤트를 막는다.
-
-    $(window).on("wheel", function(e){
-    	if($html.is(":animated")) return;
-    	if(e.originalEvent.deltaY > 80){
-        console.log("아래"+e+page);
-        // 첫번째 페이지 마지막 페이지 인식
-    		if(page == 5) return;
-      		page++;
-    	}else if(e.originalEvent.deltaY < 80){
-        console.log("위"+e+page);
-      		if(page == 1) return;
-        	page--;
-    	}
-      //
-    	var posTop = (page-1) * $(window).height();
-    	$html.animate({scrollTop : posTop});
-
-});
+          // 스크롤 애니메이션 적용
+          isAnimating = true; // 애니메이션 실행 중 플래그 설정
+          $("html, body").animate({ scrollTop: newScrollTop }, 500, function() {
+              // 애니메이션이 완료되면 플래그를 다시 false로 설정
+              isAnimating = false;
+          });
+      });
+  });

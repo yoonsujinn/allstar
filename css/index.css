@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Kanit');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
 /* font-family: 'Noto Sans KR', sans-serif; */
 
@@ -8,7 +7,7 @@
 /* font-family: 'Quantico', sans-serif; */
 
 @font-face {
-  font-family: 'Mona Sans';
+  font-family: 'MonaSans';
   src:
     url('../font/Mona-Sans-Light.woff2') format('woff2 supports variations'),
     url('../font/Mona-Sans-Light.woff2') format('woff2-variations'),
@@ -16,7 +15,6 @@
     url('../font/Mona-Sans-Bold.otf') format('woff2-variations'),
     url('../font/Mona-Sans-Bold.ttf') format('woff2-variations'),
     url('../font/Mona-Sans-BoldNarrow.ttf') format('woff2-variations');
-  font-weight: 200 900;
   font-stretch: 75% 125%;
 }
 @font-face {
@@ -34,7 +32,7 @@ a {text-decoration: none;}
 html, body{
   width:100%;
 	height:100%;
-  font-family: 'Mona Sans';
+  font-family: 'MonaSans';
   min-height: 667px;
   min-width: 375px;
 }
@@ -86,7 +84,10 @@ html, body{
   text-align: center;
   padding: 3%;
   box-sizing: border-box;
+  position: relative;
 }
+
+
 
 .mobile_side_menu ul li a{
   color : #8a919f;
@@ -110,7 +111,8 @@ header{
   grid-template-columns:3fr 7fr;
   place-items:center;
   z-index: 5555;
-  font-family: 'Mona Sans';
+
+
 
 }
 header >h2{
@@ -118,6 +120,8 @@ header >h2{
   color: #8a919f;
   letter-spacing: -1.3px;
   z-index: 99999;
+    font-weight: lighter;
+
 }
 
 header ul{
@@ -128,6 +132,8 @@ header ul{
   align-items: center;
   justify-items:center;
   color : #8a919f;
+  font-family: 'MonaSans';
+
 }
 
 header ul li{
@@ -137,7 +143,35 @@ header ul li{
 header ul li a{
   color : #8a919f;
   font-size: 22px;
-  font-family: 'Mona Sans';
+  font-family: 'MonaSans';
+  position: relative;
+  padding: 3px;
+  z-index: 555555;
+}
+
+header ul li a:hover{
+  font-weight: bold;
+}
+
+header ul li a:hover:after{
+  opacity: 1;
+  width: 100%;
+  -webkit-transition: all 3s;
+  transition: all 0.3s;
+}
+
+header ul li a:after{
+  content: '';
+  opacity: 0;
+  width: 1%;
+  height: 5px;
+  background: red;
+  position: absolute;
+  bottom: -13%;
+  left: 0;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  background: linear-gradient(140deg, #D2A8FF 12.09%, #F778BA 42.58%, #FF7B72 84.96%);
 }
 
 .pages{
@@ -145,7 +179,8 @@ header ul li a{
   height:100%;
 	box-sizing:border-box;
 	background: #282c34;
-  display: grid
+  display: grid;
+  overflow:hidden;
 }
 
 
@@ -419,7 +454,7 @@ header ul li a{
   color: #fff;
   letter-spacing: 2px;
   font-size: 27px;
-  font-family: 'Mona Sans';
+  font-family: 'MonaSans';
   font-weight: 900;
 }
 
@@ -434,7 +469,7 @@ header ul li a{
   color: #fff;
   font-size: 20px;
   align-self: baseline;
-  font-family: 'Mona Sans';
+  font-family: 'MonaSans';
   line-height: 1.7;
 }
 
@@ -451,7 +486,7 @@ header ul li a{
   border-radius: 10px;
   padding: 10px;
   box-sizing: border-box;
-  font-family: 'Mona Sans';
+  font-family: 'MonaSans';
   display: inline;
   margin: 0 15px 0 0;
 }
@@ -461,7 +496,7 @@ header ul li a{
   grid-template-columns: repeat(2, minmax(100px,auto));
   justify-content: start;
   gap: 0 20px;
-  font-family: 'Mona Sans';
+  font-family: 'MonaSans';
 
 }
 
@@ -556,17 +591,25 @@ header ul li a{
   position: absolute;
   top: 20px;
   left: 30px;
+
 }
 
-#page_4>#rec_1 > ul a li {
-  color: #fff;
+#page_4>#rec_1 > ul li.page_4_li {
   font-size: 60px;
   font-weight: bold;
   font-family: 'Rubik Iso', cursive;
   font-style: italic;
   line-height: 1.5;
+  transform: translateX(0);
+  -webkit-text-stroke-color : #fff;
+  -webkit-text-stroke-width : 1px;
+  -webkit-text-fill-color : #092540;
+  -webkit-transition: -webkit-text-stroke-width 3s;
 }
-
+.active_1{
+  -webkit-text-stroke-width: 3px !important;
+  -webkit-transition: -webkit-text-stroke-width 3s !important;
+}
 #page_4> #rec_1 > #rec_3{
   background: #888;
   transform: rotate(45deg);
@@ -575,6 +618,12 @@ header ul li a{
   position: absolute;
   left: 400px;
   top: 84px;
+  background-image: url("../img/index/rec_3_img_1.png");
+  background-size: 100%;
+  background-size: 260%;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  background-position-x: 50%;
 }
 
 #page_4>#rec_1 > #rec_4{
@@ -584,22 +633,44 @@ header ul li a{
   width: 500px;
   height: 350px;
 }
+
+
+
 #page_4>#rec_1 > #rec_4 > p{
+  height: 50px;
   color: #fff;
   font-family: 'Noto Sans KR', sans-serif;
   text-align: right;
   font-size: 19px;
   font-weight: 100;
+  position: relative;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-style: none;
+  display: none;
+    }
+
+#page_4>#rec_1 > #rec_4 > p::-webkit-scrollbar {
+  display: none; /* 크롬, 사파리, 오페라 */
+}
+.active_3{
+  display: block !important;
 }
 
-#page_4>#rec_1 > #rec_4 > ul > a li{
+#page_4>#rec_1 > #rec_4 > ul li{
   color: #3e79f1;
   font-family: 'Noto Sans KR', sans-serif;
   font-style: italic;
-  font-weight: bold;
+  font-weight: 400;
   text-align: right;
   font-size: 21px;
+}
 
+.active_2{
+  font-size: 22px !important;
+  padding: 0 10px 0 0 !important;
+  font-weight: bold !important;
 }
 
 /* 5page 시작 */
