@@ -164,7 +164,7 @@ header ul li a:after{
   content: '';
   opacity: 0;
   width: 1%;
-  height: 5px;
+  height: 4px;
   background: red;
   position: absolute;
   bottom: -13%;
@@ -626,17 +626,25 @@ header ul li a:after{
   background-position-x: 50%;
 }
 
-#page_4>#rec_1 > #rec_4{
+#page_4>#rec_1 > .rec_4_right{
   position: absolute;
   bottom: -360px;
-  right: 30px;
+  right: -50%;
   width: 500px;
   height: 350px;
+  display: none;
+  transition: all 3s;
+}
+
+.active3{
+  display: block !important;
+  right: 30px !important;
+  transition: all 3s !important;
 }
 
 
 
-#page_4>#rec_1 > #rec_4 > p{
+#page_4>#rec_1 > .rec_4_right > p{
   height: 50px;
   color: #fff;
   font-family: 'Noto Sans KR', sans-serif;
@@ -649,16 +657,16 @@ header ul li a:after{
   scrollbar-width: none;
   overflow-style: none;
   display: none;
-    }
+}
 
-#page_4>#rec_1 > #rec_4 > p::-webkit-scrollbar {
+#page_4>#rec_1 > .rec_4_right > p::-webkit-scrollbar {
   display: none; /* 크롬, 사파리, 오페라 */
 }
 .active_3{
   display: block !important;
 }
 
-#page_4>#rec_1 > #rec_4 > ul li{
+#page_4>#rec_1 > .rec_4_right > ul li{
   color: #3e79f1;
   font-family: 'Noto Sans KR', sans-serif;
   font-style: italic;

@@ -478,7 +478,7 @@
     height: 300px;
     left: 220px;
   }
-  #page_4>#rec_1 > #rec_4{
+  #page_4>#rec_1 > .rec_4_right{
     bottom: -277px;
     right: 20px;
     width: 500px;
