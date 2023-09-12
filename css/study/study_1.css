@@ -15,7 +15,7 @@ html, body{
 	height:100%;
   font-family: 'MonaSans';
   min-height: 667px;
-  min-width: 375px;
+  min-width: 1350px;
 }
 
 section {
@@ -31,12 +31,12 @@ section#left {
 section#right {
   width: 63%;
   height: 100%;
-  /* align-items: center; */
-  /* background-color: #999; */
+  display: block;
+  float: right;
   box-sizing: border-box;
   padding: 30px;
-  grid-template-rows: 75px 72px auto;
 }
+
 
 section#left nav {
   height: 500px;
@@ -70,7 +70,7 @@ section#left nav .nav_2 ul li {
   font-size: 20px;
   padding: 0 0 10px 10px
 }
-.active {
+.active_1 {
   /* font-size: 24px; */
   font-weight: bold;
 }
@@ -79,7 +79,8 @@ section#left nav .nav_2 ul li:nth-child(2) {
 }
 section#right > h2{
   font-size: 50px;
-  display: inline;
+  display: block;
+  margin: 0 0 20px 0;
 }
 
 section#right .bar_1{
@@ -92,6 +93,7 @@ section#right .bar_1{
   align-items: center;
   justify-items: center;
   justify-content: start;
+  margin: 0 0 20px 0;
 }
 
 section#right .bar_1 li{
@@ -101,26 +103,42 @@ section#right .bar_1 li:hover{
   font-weight: bold;
 }
 .active_2{
-  font-weight:  bold;
+  font-weight: bold;
   color:red;
+  font-size: 24px !important;
+}
+
+.right_con_wrap{
+  /* background: red; */
+  width: 90%;
+  height: 80%;
+  position: relative;
+  border: 1px solid #000;
+  overflow-y  : scroll;
+
 }
 
 .right_con{
-  width: 90%;
-  border: 1px solid #000;
+  width: 100%;
+  height: 100%;
   align-self: stretch;
-  overflow-y: scroll;
   opacity: 0;
   transition: all 0.8s ease;
   position: relative;
   top: 0;
   left: 0;
-  display: none;
-
 }
+#right_con_2{
+  position: absolute;
+}
+#right_con_1{
+  position: relative;
+}
+
+
 .active_3 {
   opacity: 1  !important;
-  display: block;
+  transition: all 0.8s ease;
 }
 
 .right_con > h3{
@@ -298,3 +316,54 @@ section#right .bar_1 li:hover{
 .container_6_2 > .items_4{flex-shrink	:3;}
 .container_6_2 > .items_5{flex-shrink	:2;}
 .container_6_2 > .items_6{flex-shrink	:1;}
+
+.grid_container{
+  display: grid;
+  width: 90%;
+  margin: 0 auto
+}
+img{
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+
+h1{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size:15px;
+  width: 90%;
+  margin:10px auto;
+
+}
+
+.grid_items{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size:18px;
+  text-align:center;
+}
+
+	.grid_container_1{
+		/* 각 행의 크기 설정 */
+		grid-template-rows: 50px 30px 60px;
+		/* 이름도 붙일수 있다..하지만 안붙임. */
+		/* grid-template-rows: [f] 10px [s] 20px [t]30px; */
+		grid-template-columns: 50px 20px 30px 14px;
+	}
+
+	.grid_container_2{
+		width:35%;
+		grid-template-rows: repeat(3, 100fr);
+		grid-template-columns:repeat(3, 40px);
+	}
+
+	.grid_container_3{
+		grid-template-rows: repeat(1, 30px 50px 30px);
+		grid-template-columns:repeat(1, 50px 30px 40px 80px);
+	}
+	.grid_container_4{
+		grid-template-rows:repeat(3, 30px);
+		grid-template-columns:repeat(3,30px);
+
+		row-gap:10px;
+		column-gap: 20px;
+	}
