@@ -13,8 +13,8 @@
       <nav>
         <div class="nav_2">
           <ul>
-            <li class="nav_2_li active_1">HTML</li>
-            <li class="nav_2_li">JavaScript</li>
+            <li id="nav_2_li_1" class="nav_2_li active_1">Html & Css</li>
+            <li id="nav_2_li_2" class="nav_2_li">JavaScript</li>
           </ul>
         </div>
 
@@ -23,12 +23,19 @@
     </section>
     <section id="right">
       <h2 class="study_title"> Study #Html & Css</h2>
-        <ul class="bar_1">
-          <li class="study_html" id="study_html_1"># flex</li>
-          <li class="study_html" id="study_html_2"># grid</li>
-          <li class="study_html" id="study_html_3"># ??</li>
+
+        <ul class="bar active_5" id="bar_1">
+          <li class="study_li" id="study_li_1"># flex</li>
+          <li class="study_li" id="study_li_2"># grid</li>
+          <li class="study_li" id="study_li_3"># ??</li>
         </ul>
-        <div class="right_con_wrap">
+        <ul class="bar" id="bar_2">
+          <li class="study_li" id="study_li_4"># JavaScript </li>
+          <li class="study_li" id="study_li_5"># JavaScript </li>
+          <li class="study_li" id="study_li_6"># JavaScript <li>
+        </ul>
+
+        <div class="right_con_wrap" id="right_con_wrap_1" >
           <div class="right_con" id="right_con_1">
             <h3>CSS flexible Box</h3>
                 <p>
@@ -83,6 +90,7 @@
                     [flex-wrap] : items의 여러줄 묶음(줄바꿈) 설정
                     </b>
                     <br/>
+                  </p>
                 <h2>row : items의 수평축(왼쪽>오른쪽으로 표시) (기본값)</h2>
                   <div class="container_2 container_2_1 container">
                     <div class="items items_1">1</div>
@@ -471,86 +479,113 @@
 
             </p>
             <h3>display</h3>
-          <p>
+            <p>
             grid container에 필수로 작성해야하는 옵션.<br/>
             <b>grid:</b>block특성의 grid container를 정의<br/>
             <b>inrine-grid:</b>inline 특성의 container를 정의함.
-          </p>
+            </p>
 
-          <h3>grid-template-rows</h3>
-          <p>
-            명시적 행(track) 의 크기를 정의함.<br/>
-            line의 이름도 정의할 수 있음.<br/>
-            <b>fr</b>:(fraction,공간 비율) 단위를 설정할 수 있음.<br/>
-            <b>repeat()</b> 함수를 사용할 수 있음.<br/>
-            사용방법은 grid-temokate-columns 와 같음.<br/>
-          </p>
+            <h3>grid-template-rows</h3>
+            <p>
+              명시적 행(track) 의 크기를 정의함.<br/>
+              line의 이름도 정의할 수 있음.<br/>
+              <b>fr</b>:(fraction,공간 비율) 단위를 설정할 수 있음.<br/>
+              <b>repeat()</b> 함수를 사용할 수 있음.<br/>
+              사용방법은 grid-temokate-columns 와 같음.<br/>
+            </p>
 
-          <h2>grid-template-rows</h2>
-          <h1>grid-template-rows: 50px 30px 60px;</h1>
-          <div class="grid_container grid_container_1">
-            <div class="grid_items items_1">1</div>
-            <div class="grid_items items_2">2</div>
-            <div class="grid_items items_3">3</div>
-            <div class="grid_items items_4">4</div>
-            <div class="grid_items items_5">5</div>
-          </div>
-
-          <h2>grid-template-rows:repeat()옵션</h2>
-          <p>repeat함수는 repeat(n,nnpx/%); 형식으로 사용</p>
-          <h1>		grid-template-rows: repeat(3, 100fr);</h1>
-          <div class="grid_container grid_container_2">
-            <div class="grid_items items_1">1</div>
-            <div class="grid_items items_2">2</div>
-            <div class="grid_items items_3">3</div>
-          </div>
-
-          <h2>grid-template-rows:repeat()옵션-2</h2>
-          <p>
-            repeat함수는 2번째 인수를 반복함.
-            grid_template_columns:repeat(4,1fr,2fr,3fr) 으로 사용하면<br/>
-            1fr 2fr 3fr 1fr 2fr 3fr 1fr 2fr 3fr 1fr 2fr 3fr;<br/>
-            위와 같은 반복 가능<br/>
-          </p>
-          <h1>
-            -grid-template-rows: repeat(3, 30px 11px 30px);<br/>
-            -grid-template-columns:repeat(3, 40px);
-          </h1>
-            <div class="grid_container grid_container_3">
+            <h2>grid-template-rows</h2>
+            <h1>grid-template-rows: 50px 30px 60px;</h1>
+            <div class="grid_container grid_container_1">
               <div class="grid_items items_1">1</div>
               <div class="grid_items items_2">2</div>
               <div class="grid_items items_3">3</div>
-              <div class="grid_items items_4">1</div>
-              <div class="grid_items items_5">2</div>
-              <div class="grid_items items_6">3</div>
-              <div class="grid_items items_7">1</div>
-              <div class="grid_items items_8">2</div>
-              <div class="grid_items items_9">3</div>
+              <div class="grid_items items_4">4</div>
+              <div class="grid_items items_5">5</div>
             </div>
 
-            <h3>gap , column-gap , gap</h3>
-            <p>그리드 셀 사이의 간격을 설정</p>
-            <p><b>row-gap:10px - row 간격<br/>
-            column-gap:20px - column-gap 간격</b><br/>
-            ie에서는 gap의 대체 속성이 없음.
+            <h2>grid-template-rows:repeat()옵션</h2>
+            <p>repeat함수는 repeat(n,nnpx/%); 형식으로 사용</p>
+            <h1>		grid-template-rows: repeat(3, 100fr);</h1>
+            <div class="grid_container grid_container_2">
+              <div class="grid_items items_1">1</div>
+              <div class="grid_items items_2">2</div>
+              <div class="grid_items items_3">3</div>
+            </div>
+
+            <h2>grid-template-rows:repeat()옵션-2</h2>
+            <p>
+              repeat함수는 2번째 인수를 반복함.
+              grid_template_columns:repeat(4,1fr,2fr,3fr) 으로 사용하면<br/>
+              1fr 2fr 3fr 1fr 2fr 3fr 1fr 2fr 3fr 1fr 2fr 3fr;<br/>
+              위와 같은 반복 가능<br/>
             </p>
-
-
-              <div class="grid_container grid_container_4">
-                <div class="grid_items items_1"></div>
-                <div class="grid_items items_2"></div>
-                <div class="grid_items items_3"></div>
-                <div class="grid_items items_4"></div>
-                <div class="grid_items items_5"></div>
-                <div class="grid_items items_6"></div>
-                <div class="grid_items items_7"></div>
-                <div class="grid_items items_8"></div>
-                <div class="grid_items items_9"></div>
+            <h1>
+              -grid-template-rows: repeat(3, 30px 11px 30px);<br/>
+              -grid-template-columns:repeat(3, 40px);
+            </h1>
+              <div class="grid_container grid_container_3">
+                <div class="grid_items items_1">1</div>
+                <div class="grid_items items_2">2</div>
+                <div class="grid_items items_3">3</div>
+                <div class="grid_items items_4">1</div>
+                <div class="grid_items items_5">2</div>
+                <div class="grid_items items_6">3</div>
+                <div class="grid_items items_7">1</div>
+                <div class="grid_items items_8">2</div>
+                <div class="grid_items items_9">3</div>
               </div>
-      <br><br><br><br>
-          </div>
 
+              <h3>gap , column-gap , gap</h3>
+              <p>그리드 셀 사이의 간격을 설정</p>
+              <p><b>row-gap:10px - row 간격<br/>
+              column-gap:20px - column-gap 간격</b><br/>
+              ie에서는 gap의 대체 속성이 없음.
+              </p>
+
+
+                <div class="grid_container grid_container_4">
+                  <div class="grid_items items_1"></div>
+                  <div class="grid_items items_2"></div>
+                  <div class="grid_items items_3"></div>
+                  <div class="grid_items items_4"></div>
+                  <div class="grid_items items_5"></div>
+                  <div class="grid_items items_6"></div>
+                  <div class="grid_items items_7"></div>
+                  <div class="grid_items items_8"></div>
+                  <div class="grid_items items_9"></div>
+                </div>
+
+          </div>
+          <div class="right_con" id="right_con_3">안녕</div>
+          <div class="right_con" id="right_con_4">안녕</div>
+          <div class="right_con" id="right_con_5">right_con_5</div>
+          <div class="right_con" id="right_con_6">right_con_6</div>
+
+          <!-- <div class="right_con" id="right_con_1">
+            right_condd_111 <br><br><br><br><br><br><br><br>
+            right_condd_111 <br><br><br><br><br><br><br><br>
+            right_condd_111 <br><br><br><br><br><br><br><br>
+            right_condd_111 <br><br><br><br><br><br><br><br>
+            right_condd_111 <br><br><br><br><br><br><<b></b>><br>
+            right_condd_111 <br><br><br><br><br><br><br><br>
+            right_condd_111 <br><br><br><br><br><br><br><br>
+          </div>
+          <div class="right_con" id="right_con_2">
+            right_condd_222 <br><br><br><br><br><br><br><br>
+            right_condd_222 <br><br><br><br><br><br><br><br>
+            right_condd_222 <br><br><br><br><br><br><br><br>
+            right_condd_222 <br><br><br><br><br><br><br><br>
+            right_condd_222 <br><br><br><br><br><br><<b></b>><br>
+            right_condd_222 <br><br><br><br><br><br><br><br>
+            right_condd_222 <br><br><br><br><br><br><br><br>
+          </div> -->
+          <!-- <div class="right_con" id="right_con_3">right_con_333</div>
+          <div class="right_con" id="right_con_4">right_con_444</div>
+          <div class="right_con" id="right_con_5">right_con_5</div>
+          <div class="right_con" id="right_con_6">right_con_6</div> -->
         </div>
+
 
 
     </section>
