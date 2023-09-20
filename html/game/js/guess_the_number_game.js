@@ -21,7 +21,7 @@
     //   $(".correct_1_2").text( "정답은 "+min+" 보다 커요.");
     //
     //   console.log(random1);
-    //   console.log(min);
+      console.log(random1);
     // }
 
 

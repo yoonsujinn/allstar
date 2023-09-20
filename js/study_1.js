@@ -26,6 +26,8 @@ document.addEventListener("DOMContentLoaded", function() {
         right_con_5.classList.add('active_3');
       }else if (a == study_li_6) {
         right_con_6.classList.add('active_3');
+      }else if (a == study_li_7) {
+        right_con_7.classList.add('active_3');
       }
       });
     });
@@ -66,4 +68,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
       });
     });
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    var screenWidth = document.getElementById("screenWidth");
+    var screenHeight = document.getElementById("screenHeight");
+
+    function updateScreenSize() {
+        screenWidth.textContent = window.innerWidth;
+        screenHeight.textContent = window.innerHeight;
+        console.log(window.innerHeight)
+    }
+    // 초기에 화면 크기 정보 업데이트
+    updateScreenSize();
+    // 브라우저 크기가 변경될 때마다 화면 크기 정보 업데이트
+    window.addEventListener("resize", updateScreenSize);
+
+
+
+
   });

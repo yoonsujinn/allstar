@@ -15,22 +15,41 @@ html, body{
 	height:100%;
   overflow: hidden;
   font-family: 'Noto Sans KR', sans-serif;
+}
+
+.home{
+  display: grid;
+  position: fixed;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #000;
+  padding: 5px;
+  color:#fff;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
 
 }
 
 section {
   display:grid;
   align-items: center;
+  overflow: hidden;
 
 }
 section#left {
   /* grid-template-rows: 80px auto; */
-  width: 37%;
+  width: 31%;
   height: 100%;
   float: left;
+  position: relative;
+
 }
 section#right {
-  width: 63%;
+  width: 61%;
   height: 100%;
   display: block;
   float: right;
@@ -41,13 +60,15 @@ section#right {
 
 
 section#left nav {
+
+  width: 500px;
   height: 500px;
-  /* position: absolute; */
-  background-image: url("../../img/study/study_1.png");
+  background-size: 100%;
+  background-image: url(../../img/study/study_1.png);
   background-repeat: no-repeat;
-  position: relative;
-  /* transform: translate(-50%, -50%); */
-  left:-43%;
+  position: absolute;
+  left: -300px;
+
 }
 
 section#left nav .nav_2{
@@ -81,7 +102,7 @@ section#left nav .nav_2 ul li:nth-child(2) {
   padding: 0 0 10px 20px;
 }
 section#right >.right_con_wrap > .right_con > h2{
-  margin: 40px auto 0 auto;
+  margin: 10px auto 0 auto;
   display: block;
   width: 90%;
   text-align: center;
@@ -95,14 +116,12 @@ section#right >.right_con_wrap > .right_con > h2{
 }
 
 section#right .bar{
-  width: 85%;
+  width: 90%;
   height: 40px;
-  margin: 20px 0 0 0;
+  margin: 20px 0 20px 0;
   border: 2px solid #222;
   border-radius: 20px;
-  transition: all 0.8s ease;
-  position: absolute;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(25%, auto));
   justify-items: center;
   align-content: center;
   opacity: 0;
@@ -126,16 +145,14 @@ section#right .bar li:hover{
 }
 .active_2{
   font-weight: bold;
-  color:red;
+  color : #578ef4;
 }
 
 .right_con_wrap{
+    width: 90%;
   top: 17%;
-  width: 85%;
   height: 73%;
-  position: absolute;
   border: 1px solid #000;
-  /* overflow-y  : scroll; */
 
 }
 .active_4 {
@@ -147,8 +164,8 @@ section#right .bar li:hover{
   width: 100%;
   height: 100%;
   align-self: stretch;
-  transition: all 0.8s ease;
-  position: absolute;
+
+  /* position: absolute; */
   overflow-y: scroll;
   opacity: 0;
   display: none;
@@ -157,6 +174,7 @@ section#right .bar li:hover{
   opacity: 1 !important;
   transition: all 0.8s ease;
   display: block;
+
 }
 
 /* #right_con_1{
@@ -180,15 +198,25 @@ section#right .bar li:hover{
   border-bottom: 3px solid #111;
   display:block;
 	text-align:center;
-  font-size:30px;
-  background-color:#e5e5e5;
-	font-family: 'Noto Sans KR', sans-serif;
-	font-weight: bold;
+  font-size: 20px;
+  background-color: #e5e5e5;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: bold;
+  padding: 10px 0 10px 0;
+
+}
+
+pre.study_page_span{
+  background-color: #2b2b37;
+  color: #a9a9a9;
+  padding: 10px 0 10px 0;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  display: block;
 }
 
 .study_title{
   width: 300px;
-  position: relative;
   display: block;
   font-size: 29px;
   font-family: 'Noto Sans KR', sans-serif;
@@ -354,7 +382,7 @@ section#right .bar li:hover{
   margin: 0 auto
 }
 img{
-  width: 100%;
+  width: 72%;
   height: auto;
   padding: 10px;
 }
@@ -390,32 +418,138 @@ h1{
 	.grid_container_3{
 		grid-template-rows: repeat(1, 30px 50px 30px);
 		grid-template-columns:repeat(1, 50px 30px 40px 80px);
+    margin: 0 0 30px 30px;
 	}
 	.grid_container_4{
 		grid-template-rows:repeat(3, 30px);
 		grid-template-columns:repeat(3,30px);
 		row-gap:10px;
 		column-gap: 20px;
+    margin: 0 0 30px 30px;
 	}
+
+  .backback{
+    border: 1px solid #000;
+    margin: auto;
+    background-image: url(../../img/study/backback.jpg);
+    width: 150px;
+    height: 150px;
+    background-size: 50px;
+    background-repeat: no-repeat;
+    margin: 20px auto;
+  }
+
+  #backback_1{background-position: top; }
+  #backback_2{background-position: left;   }
+  #backback_3{background-position: center  }
+  #backback_4{background-position: 25% 75%;  }
+
+  #backback_5{
+    border: 10px dashed blue;
+    background-size: 400px;
+    background-clip: border-box;
+    background-position: center;
+    padding:10px;
+   }
+   #backback_6{
+     border: 10px dashed blue;
+     background-size: 400px;
+     background-clip: padding-box;
+     background-position: center;
+     padding:10px;
+    }
+    #backback_7{
+      border: 10px dashed blue;
+      background-size: 400px;
+      background-clip: content-box;
+      background-position: center;
+      padding:10px;
+     }
+
+
 
   @media screen and (min-width:1300px) and (max-width:1700px) {
     section#right .bar {
-      width: 90%;
+      /* width: 70%; */
     }
     .right_con_wrap {
-      width: 90%;
+      /* width: 70%; */
+    }
+    section#right {
+      width: 65%;
+    }
+
+  }
+  @media screen and (min-width:767px) and (max-width:1300px) {
+
+
+    section#right{
+      width: 65%;
+      height: 96%;
+      padding: 0;
+    }
+    section#left {
+      width: 35%;
+      height: 96%;
+    }
+
+    .study_title {
+      font-size: 23px;
+    }
+
+    section#right .bar {
+      /* width: 65%;   */
+      margin: 10px 0 10px 0
+    }
+
+    section#left nav{
+      width: 400px;
+      height: 400px;
+    }
+    .right_con_wrap {
+      /* width: 65%; */
+      top: 15%;
+    }
+
+    section#left nav .nav_2{
+      width: 450px;
+      height: 450px;
+      top: -45%;
+    }
+    .right_con > p{
+      font-size: 18px;
     }
   }
-  @media screen and (min-width:0px) and (max-width:1300px) {
+  @media screen and (min-width:1px) and (max-width:767px) {
+
+    section#right{
+      width: 65%;
+      height: 65%;
+      padding: 0;
+    }
+    section#left {
+      width: 35%;
+      height: 65%;
+    }
     section#right .bar {
-      width: 100%;
+      width: 95%;
+    }
+
+    section#left nav{
+      width: 400px;
+      height: 400px;
     }
     .right_con_wrap {
-      width: 100%;
-      top: 24%;
+      width: 95%;
+      height: 70%;
     }
-    section#right{
-      width: 50%;
-      float: left;
+
+    section#left nav{
+      left: -100%;
+    }
+    section#left nav .nav_2{
+      width: 450px;
+      height: 450px;
+      top: -45%;
     }
   }

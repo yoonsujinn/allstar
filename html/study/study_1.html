@@ -8,6 +8,8 @@
     <script type="text/javascript" src="../../js/study_1.js"></script>
   </head>
   <body>
+    <a class="home" href="../../index.html" target="_blank">HOME</a>
+
 
     <section id="left">
       <nav>
@@ -25,17 +27,19 @@
       <h2 class="study_title"> Study #Html & Css</h2>
 
         <ul class="bar active_5" id="bar_1">
-          <li class="study_li" id="study_li_1"># flex</li>
-          <li class="study_li" id="study_li_2"># grid</li>
-          <li class="study_li" id="study_li_3"># ??</li>
+          <li class="study_li" id="study_li_1"># Flex</li>
+          <li class="study_li" id="study_li_2"># Grid</li>
+          <li class="study_li" id="study_li_3"># BackGround</li>
+          <li class="study_li" id="study_li_4"># animation</li>
         </ul>
         <ul class="bar" id="bar_2">
-          <li class="study_li" id="study_li_4"># JavaScript </li>
           <li class="study_li" id="study_li_5"># JavaScript </li>
-          <li class="study_li" id="study_li_6"># JavaScript <li>
+          <li class="study_li" id="study_li_6"># Window </li>
+          <li class="study_li" id="study_li_7"># Scroll <li>
         </ul>
 
         <div class="right_con_wrap" id="right_con_wrap_1" >
+          <!-- 플렉스 공부 -->
           <div class="right_con" id="right_con_1">
             <h3>CSS flexible Box</h3>
                 <p>
@@ -453,6 +457,7 @@
             </div>
 
           </div>
+          <!-- 그리드 공부 -->
           <div class="right_con" id="right_con_2">
             <h3> CSS Grid</h3>
             <p>
@@ -494,7 +499,7 @@
               사용방법은 grid-temokate-columns 와 같음.<br/>
             </p>
 
-            <h2>grid-template-rows</h2>
+            <h2>grid-template-rows/column</h2>
             <h1>grid-template-rows: 50px 30px 60px;</h1>
             <div class="grid_container grid_container_1">
               <div class="grid_items items_1">1</div>
@@ -556,11 +561,209 @@
                   <div class="grid_items items_9"></div>
                 </div>
 
+                <h3>grid-template-areas</h3>
+                <p>각 영역에 이름을 붙이고 붙인 이름으로 배치할 수 있다.</p>
+                <p>
+                  grid의 컨테이너에 "grid-template-areas" 속성을 준 뒤 <br>
+                  header header header<br>
+                  . body .<br>
+                  bottom . .<br>
+                  3x3일 경우 위 형식으로 구조를 정의 할 수 있다.<br>
+                  컨테이너 안의 요소들에게는<br>
+                  "grid-area:header","grid-area:body","grid-area:bottom"<br>
+                  형식으로 이름을 정의해줘야 한다!<br><br><br>
+                  빈 공간은 . 또는 none으로 비워줄 수 있다.
+                  <br><br>
+
+
+              </p>
           </div>
-          <div class="right_con" id="right_con_3">안녕</div>
-          <div class="right_con" id="right_con_4">안녕</div>
-          <div class="right_con" id="right_con_5">right_con_5</div>
-          <div class="right_con" id="right_con_6">right_con_6</div>
+          <!-- 백그라운드 속성 -->
+          <div class="right_con" id="right_con_3">
+            <p>태그의 배경을 지정하는 백그라운드 속성은 쉬운거같으면서 은근히 어렵다.
+              border 속성처럼 상세 속성을 한번에 사용할 수 있다.<br/>
+              background: yellow url('/images/attach/google.png') no-repeat center center;<br/>
+              color / image / repeat / position-y / position-x 순 이다.<br/>
+            </p>
+
+            <h3>background 세부 속성</h3>
+            <p>
+              <b>background-color: </b> 배경의 색상을 지정한다.<br/>
+              <b>background-image: </b>배경 이미지를 지정한다. /이미지 경로설정은 url();<br/>
+
+                <b>★ background-position: </b>배경이미지의 위치를 지정한다.<br/>
+                  <h2>background-position</h2>
+                <p>
+                  배경 이미지의 초기 위치를 지정한다.
+                  background-position-x(가로), background-position-y(세로)
+                  따로따로 지정할 수 있다.
+                </p>
+                  <p>background-position: top;</p>
+                  <div class="backback" id="backback_1"></div>
+                  <p>background-position: left;</p>
+                  <div class="backback" id="backback_2"></div>
+                  <p>background-position: center;</p>
+                  <div class="backback" id="backback_3"></div>
+                  <p>background-position: 25% 75%;</p>
+                  <div class="backback" id="backback_4"></div>
+                <p>
+                  <b>background-repeat: </b> 배경 이미지의 반복여부를 지정한다.<br/>
+                  <b>background-size: </b> 배경 이미지 사이즈를 지정한다.px과 %로 지정할 수 있다.<br/>
+                  <b>★ background-clip: </b>배경 이미지가 border의 침범 여부를 선택할 수 있다.<br/>
+                </p>
+
+                <h2>background-clip</h2>
+                <p>border-box / padding-box / content-box 속성이 있다.</p>
+                <p>border-box : </p>
+                <div class="backback" id="backback_5"></div>
+                <p>padding-box : </p>
+                <div class="backback" id="backback_6"></div>
+                <p>content-box : </p>
+                <div class="backback" id="backback_7"></div>
+              <b>background-attachment: </b> 배경 이미지의 고정 여부를 선택할 수 있다.<br/>
+            </p>
+          </div>
+
+          <!-- animation공부 -->
+          <div class="right_con" id="right_con_4">
+            <p>css요소에서의 animation</p>
+            <p>
+              <b>animation-name</b> : 애니메이션의 이름을 지어준다. <br>
+              <b>animation-duration </b> :  애니메이션 지속 시간을 정해준다.<br>
+              <b>@keyframes </b> 애니메이션을 지속하는 시간에 동작을 정해준다..<br>
+            </p>
+            <img src="../../img/study/ani.jpg" alt="ani">
+
+            <p>
+              <b>animation-delay</b> 애니메이션 시작하기 전 딜레이 시간을 지정 한다..<br>
+              <b>animation-iteration-count</b> 애니메이션이 실행되어야 하는 시간을 설정한다.
+              "infinite" 옵션을 사용하여 애니메이션이 끝나지않도록 할 수 있다..<br>
+            </p>
+            <p>
+              <b>animation-timing-function</b> 애니메이션의 속도를 지정할 수 있다. 아래의 속성값이 있다..<br>
+              <b>ease</b> 빠르게시작하여 느려졌다가 다시 천천히 끝난다(기본값)..<br>
+              <b>linear</b> 처음부터 끝까지 동일한 속도이다..<br>
+              <b>ease-in</b> 느린 시작후 속도가 점차 빨라진다...<br>
+              <b>ease-out</b> 빠르게 시작한 후 점차 느려진다..<br>
+              <b>ease-in-out</b> 시작과 끝이 느리지만 중간 과정이 빠르다..<br>
+              <b>cubic-bezier(n,n,n,n)</b> 속도를 알아서 지정할 수 있다..<br>
+            </p>
+          </div>
+
+    <!-- 자바스크립트 기초 -->
+  <div class="right_con" id="right_con_5">
+    <h3>자바스크립트 요소의 선택</h3>
+    <p>
+      <b>getElementById</b> 메서드로 'id'요소를 선택할 수 있다.
+    </p>
+    <pre class="study_page_span">
+      const element = document.getElementById('elementId');</pre>
+    <p>
+      <b>getElementsByClassName</b> 메서드로 'class'요소를 선택할 수 있다.
+    </p>
+    <pre class="study_page_span">
+      const elements = document.getElementsByClassName('classname');</pre>
+    <p>
+      <b>getElementsByTagName</b> 메서드로 '태그' 요소를 선택할 수 있다..p/span 등
+    </p>
+    <pre class="study_page_span">
+      const elements = document.getElementsByTagName('tagname');</pre>
+    <p>
+      <b>querySelector</b> 메서드로 'css선택자'의 첫번째 요소를 선택할 수 있다.
+    </p>
+    <pre class="study_page_span">
+      const elements = documents = document.querySelector('cssSelector')</pre>
+    <p>
+      <b>querySelectolAll</b> 메서드로 'css선택자'의 '모든' 요소를 선택할 수 있다.
+    </p>
+    <pre class="study_page_span">
+      const elements = documen.querySelectorAll('elementName');
+    </pre>
+
+  </div>
+    <!-- 자바스크립트 화면 크기 공부 -->
+  <div class="right_con" id="right_con_6">
+
+    <h3>window.innerWidth & window.innerHeight</h3>
+    <p>
+      자바스크립트에서 window 객체는 다양한 역할을 한다.
+      이 중 window.innerWidth와 window.innerHeight는
+      <b>현재 창의</b> 내부 넓이와 높이를 픽셀단위로 알 수 있다.
+            </p>
+        <pre class="study_page_span">
+    function updateScreenSize() {
+      // 변수를 선언한다.
+      var screenWidth = document.getElementById("screenWidth");
+      var screenHeight = document.getElementById("screenHeight");
+
+      // 현재 창의 넓이와 높이를 가져와서 해당 변수에 넣었다.
+      screenWidthElement.textContent = screenWidth;
+      screenHeightElement.textContent = screenHeight;
+    }
+    // 초기에 화면 크기 정보 업데이트
+    updateScreenSize();
+    // 브라우저 크기가 변경될 때마다 화면 크기 정보 업데이트
+    window.addEventListener("resize", updateScreenSize);</pre>
+          <p>
+            < 실행 결과 > <br>
+            화면 너비: <span id="screenWidth"></span>px,
+            화면 높이: <span id="screenHeight"></span>px
+          </p>
+          <p>
+            또한, 화면크기를 얻을때에는
+            초기 화면 크기정보를 업데이트 하기위해 updateScreenSize();
+            함수를 한번 더 호출하고, 사용자에 의해 브라우저 크기가
+            변경 될 수 있으므로 변경될때마다 화면의크기를 업데이트
+            해줄 수 있는 코드를 덧붙여줘야한다.
+          </p>
+        <pre class="study_page_span">
+          // 초기에 화면 크기 정보 업데이트
+          updateScreenSize();
+
+          // 브라우저 크기가 변경될 때마다 화면 크기 정보 업데이트
+          window.addEventListener("resize", updateScreenSize);</pre>
+</div>
+
+<!-- 스크롤 이벤트  -->
+<div class="right_con" id="right_con_7">
+  <h3>스크롤 이벤트 감지</h3>
+    <pre class="study_page_span">
+      window.addEventListener("scroll", function() {
+        // 스크롤 이벤트 실행시 사용하는 기본적인 코드다.
+        // 여기에 원하는 동작을 추가할 수 있다.
+    });
+    </pre>
+  <h3>현재 스크롤 위치 가져오기.</h3>
+    <pre class="study_page_span">
+      var scrollY = window.scrollY; // 수직 스크롤 위치
+      var scrollX = window.scrollX; // 수평 스크롤 위치
+    </pre>
+
+  <h3>스크롤 이벤트 막기</h3>
+    <pre class="study_page_span">
+      window.addEventListener("scroll", function(event) {
+      event.preventDefault(); // 스크롤 이벤트의 기본 동작을 막음
+  });</pre>
+  <h3>스크롤 이벤트 막기</h3>
+  <pre class="study_page_span">
+    window.addEventListener("scroll", function() {
+    var scrollPosition = window.scrollY;
+
+    if (scrollPosition > 500) {
+        // 스크롤 위치가 500px 이상인 경우
+        // 원하는 동작을 추가하면 된다.
+    }
+});</pre>
+<h3>스크롤 위치 조정하기.</h3>
+<img src="../../img/study/scrollto.jpg" alt="">
+<p>scrollTo는 스크롤의 위치를 조정한다.</p>
+
+</div>
+<div class="right_con" id="right_con_8">right_con_8</div>
+
+
+</div>
+
 
           <!-- <div class="right_con" id="right_con_1">
             right_condd_111 <br><br><br><br><br><br><br><br>

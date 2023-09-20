@@ -1,4 +1,100 @@
-//
+  // 한 화면씩 이동.
+
+  window.addEventListener("wheel", function(event) {
+
+    // console.log("현재 스크롤 위치: " + scrollY + "px");
+    // console.log("현재 화면 크기: " + window.innerHeight + "px");
+    // console.log("페이지: " + scrollY / window.innerHeight);
+
+    var pageNumber = scrollY / window.innerHeight;
+    	if(event.deltaY < 0){
+         window.scrollBy(0, -(window.innerHeight - 100));
+      }else {
+        // scrollBy(x,y) - 수직 스크롤양 / 수평 스크롤양 지정
+        window.scrollBy (0, window.innerHeight - 100);
+      }
+  });
+
+
+
+
+
+
+
+  window.addEventListener("scroll", function() {
+    let page_0 = {min: 0,max: 0.8111111};
+    let page_1 = {min: 0.9,max: 1.5};
+    let page_2_5 = {min: 1.6,max: 4};
+
+    var scrollY = window.scrollY; // 수직 스크롤 위치
+    var pageNumber = scrollY / window.innerHeight;
+
+    const profile_li = document.querySelectorAll('.profile_li');
+    const page_2_Certificate = document.querySelectorAll('.page_2_Certificate');
+    const page_2_work = document.querySelectorAll('.page_2_work');
+
+    // 0페이지일때
+    if (pageNumber == page_0 || pageNumber == 0) {
+        profile_li.forEach((li) => {
+            li.style.transform = 'translate(90%, 0%)';
+            li.style.opacity = '0';
+        });
+        page_2_Certificate.forEach((obj) => {
+            obj.style.transform = 'translate(9%, 0%)'; // transform 속성 변경
+            obj.style.opacity = '0'; // opacity 속성 변경
+        });
+        page_2_work.forEach((e) => {
+            e.style.transform = 'translate(10%, 0%)'; // transform 속성 변경
+            e.style.opacity = '0'; // opacity 속성 변경
+        });
+        // 1페이지일때
+    // } else if (pageNumber > 0.9 || pageNumber >= 1.9) {
+    } else if (pageNumber == page_1 || pageNumber == 1 ) {
+
+        profile_li.forEach((li) => {
+            li.style.transform = 'translate(0%, 0%)';
+            li.style.opacity = '1';
+        });
+        page_2_Certificate.forEach((obj) => {
+            obj.style.transform = 'translate(0%, 0%)'; // transform 속성 변경
+            obj.style.opacity = '1'; // opacity 속성 변경
+        });
+        page_2_work.forEach((e) => {
+            e.style.transform = 'translate(0%, 0%)'; // transform 속성 변경
+            e.style.opacity = '1'; // opacity 속성 변경
+        });
+        // 2~3페이지일때
+    // } else if (pageNumber >= 2 || pageNumber == 3 || pageNumber == 4) {
+  } else if (pageNumber == page_2_5 || pageNumber == 2) {
+
+        profile_li.forEach((li) => {
+            li.style.transform = 'translate(90%, 0%)';
+            li.style.opacity = '0';
+        });
+        page_2_Certificate.forEach((obj) => {
+            obj.style.transform = 'translate(9%, 0%)'; // transform 속성 변경
+            obj.style.opacity = '0'; // opacity 속성 변경
+
+        });
+        page_2_work.forEach((e) => {
+            e.style.transform = 'translate(10%, 0%)'; // transform 속성 변경
+            e.style.opacity = '0'; // opacity 속성 변경
+        });
+    }
+
+});
+
+document.addEventListener('DOMContentLoaded', function(){
+  // 왼쪽 상단 메뉴 버튼 클릭
+  document.querySelector(".disign_contaner_X").addEventListener("click", function(e){
+      if ( document.querySelector('.disign_contaner').classList.contains('disign_contaner_nav_active') ){
+        //메뉴닫힘
+        document.querySelector('.disign_contaner').classList.remove('disign_contaner_nav_active');
+        document.querySelector('.disign_contaner').classList.remove('disign_contaner_nav_active');
+      }
+    });
+  });
+
 // 자바스크립트 모바일 메뉴 온/오프
 document.addEventListener('DOMContentLoaded', function(){
   // 왼쪽 상단 메뉴 버튼 클릭
@@ -36,80 +132,33 @@ document.addEventListener('DOMContentLoaded', function(){
               document.querySelector('.mobile_menu').classList.remove('mobile_menu_on');
             });
           }
-});
-
-
-
-  // 한화면씩 이동하는 스크롤
-  $(document).ready(function() {
-    var isAnimating = false; // 애니메이션이 실행 중인지 여부를 추적하는 플래그
-
-    $(window).on('mousewheel DOMMouseScroll', function(event) { // 스크롤 이벤트 핸들러 등록
-      event.preventDefault(); // 기본 스크롤 동작 막기
-      if (isAnimating) {return false;}// 애니메이션이 실행 중이면 종료
-
-      var page44 = document.getElementById("page_4"); // 요소를 ID로 선택
-      var elementHeight = page44.offsetHeight;
-      var screenHeight = window.innerHeight; // 화면 높이를 측정
-      var currentScrollTop = $(window).scrollTop(); // 현재 스크롤 위치 가져오기
-
-
-      var newScrollTop;
-      if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
-        // 마우스 휠을 위로 스크롤했을 때
-        newScrollTop = currentScrollTop - elementHeight;
-        // console.log(newScrollTop+"실제 이동되는 스크롤");
-        // console.log(currentScrollTop+"현재스크롤위치");
-        // console.log(elementHeight+"화면높이");
-      } else {
-        // 마우스 휠을 아래로 스크롤했을 때
-        newScrollTop = currentScrollTop + elementHeight;
-        // console.log(newScrollTop+"실제 이동되는 스크롤");
-        // console.log(currentScrollTop+"현재스크롤위치");
-        // console.log(elementHeight+"화면높이");
-}
-
-  // 스크롤 애니메이션 적용
-  isAnimating = true; // 애니메이션 실행 중 플래그 설정
-  $("html, body").animate({ scrollTop: newScrollTop }, 500, function() {
-    // 애니메이션이 완료되면 플래그를 다시 false로 설정
-      isAnimating = false;
-    });
-  });
-});
+        });
 
 
     // page_4_li active_1 on off
     document.addEventListener("DOMContentLoaded", function() {
-        const page_4_li = document.querySelectorAll('.page_4_li');
-        const page_4_li_1 = document.querySelectorAll('#page_4_li_1');
-        const page_4_li_2 = document.querySelectorAll('#page_4_li_2');
-        const page_4_li_3 = document.querySelectorAll('#page_4_li_3');
+      const page_4_li = document.querySelectorAll('.page_4_li');
+      const rec_3 = document.querySelector('#rec_3');
+      const newBackgroundImageUrl = 'url(./img/index/rec_3_img_1.gif)';
 
-        const newBackgroundImageUrl = 'url(./img/index/rec_3_img_1.png)';
-
-        page_4_li.forEach((liElement) => {
-            liElement.addEventListener("click", function(e) {
-              page_4_li.forEach((otherLi) => {
-             otherLi.classList.remove('active_1');
-         });
-     // 클릭한 li 요소에 'active_1' 클래스를 추가합니다.
-      page_4_li.forEach((liElement, index) => {
-        liElement.addEventListener("click", function(e) {
+      page_4_li.forEach((s, index) => {
+        s.addEventListener("click", function() {
           page_4_li.forEach((otherLi, otherIndex) => {
             otherLi.classList.remove('active_1');
             const recRight = document.querySelector(`#rec_4_right_${otherIndex + 1}`);
             recRight.classList.toggle('active3', index === otherIndex);
           });
 
-          // 클릭한 li 요소에 'active_1' 클래스를 추가합니다.
-          liElement.classList.add('active_1');
+          s.classList.add('active_1');
           rec_3.style.backgroundImage = newBackgroundImageUrl;
+
+
+
+
         });
       });
     });
-  });
-});
+
     // potfolio_list active_1 on off
   document.addEventListener("DOMContentLoaded", function() {
     const potfolio_list = document.querySelectorAll('.potfolio_list');
@@ -135,34 +184,78 @@ document.addEventListener('DOMContentLoaded', function(){
            'url(./img/index/study_list_1.png)','url(./img/index/study_list_2.png)','url(./img/index/study_list_3.png)'
          ];
 
-         if( a == web_list_1 ) {
-           rec_3.style.backgroundImage = webListImages;
-         }else if ( a == web_list_2 ) {
-           rec_3.style.backgroundImage = webListImages[1];
-         }else if ( a == design_list_1 ) {
-           rec_3.style.backgroundImage = designListImages[0];
-         }else if ( a == design_list_2 ) {
-           rec_3.style.backgroundImage = designListImages[1];
-         }else if ( a == design_list_3 ) {
-           rec_3.style.backgroundImage = designListImages[2];
-         }else if ( a == study_list_1 ) {
+         if (a == web_list_1) {
+           rec_3.style.backgroundImage = webListImages[0];
+            document.getElementById('rec_3_wrap').onclick = function() {
+            event.preventDefault(); // 기본 동작을 막음
+             window.open("http://www.luminar.co.kr", "_blank");
+        };
+        } else if (a == web_list_2) {
+            rec_3.style.backgroundImage = webListImages[1];
+            // rec_3_wrap.href = "./html/game/guess_the_number_game.html";
+            document.getElementById('rec_3_wrap').onclick = function() {
+            event.preventDefault(); // 기본 동작을 막음
+            window.open("./html/game/guess_the_number_game.html", "_blank");
+        };
+        } else if (a == design_list_2) {
+            rec_3.style.backgroundImage = designListImages[1];
+            event.preventDefault(); // 기본 동작(새 창 열림)을 막음
+            designList3ClickHandler();
+
+        } else if (a == design_list_3) {
+            rec_3.style.backgroundImage = designListImages[2];
+            event.preventDefault(); // 기본 동작(새 창 열림)을 막음
+            designList3ClickHandler();
+
+          }else if ( a == study_list_1 ) {
            rec_3.style.backgroundImage = studyListImages[0];
-         }else if ( a == study_list_2 ) {
-           rec_3.style.backgroundImage = studyListImages[1];
-         }else if ( a == study_list_3 ) {
-           rec_3.style.backgroundImage = studyListImages[2];
+           document.getElementById('rec_3_wrap').onclick = function() {
+           event.preventDefault(); // 기본 동작을 막음
+           window.open("./html/study/study_1.html", "_blank");
          }
-         // 그리고, background이미지를 변경합니다.
+       }
+      });
+    });
+    function designList3ClickHandler() {
+      const disign_contaner_1 = document.getElementById("disign_contaner_1");
+      disign_contaner_1.classList.add("disign_contaner_nav_active");
+      // disign_contaner_1 요소에만 overflow를 auto로 설정
+      disign_contaner_1.style.overflow = "auto";
+      event.preventDefault(); // 기본 동작(새 창 열림)을 막음
+  }
+  function designList3ClickHandler_2() {
+    const disign_contaner_1 = document.getElementById("disign_contaner_2");
+    disign_contaner_1.classList.add("disign_contaner_nav_active");
+    // disign_contaner_1 요소에만 overflow를 auto로 설정
+    disign_contaner_1.style.overflow = "auto";
+    event.preventDefault(); // 기본 동작(새 창 열림)을 막음
+}
+});
 
-         console.log(webListImages);
-         console.log(designListImages);
-         console.log(studyListImages);
+// 디자인 페이지가 열렸을때 스크롤을 고정하는 코드이다.
+window.addEventListener("scroll", function(event) {
+  var disign_contaner = document.querySelectorAll(".disign_contaner");
+  var innerHeight = window.innerHeight * 3; //현재 화면 길이*3이면 3페이지이다.
+  if (disign_contaner_1.classList.contains('disign_contaner_nav_active')) {
+    window.scrollTo(0, innerHeight); //window.scrollTo는 스크롤의 위치를 변경한다.
+  }
+});
+querySelectorAll('.potfolio_list');
 
-         // rec_3 요소의 배경 이미지 설정
 
-
-            });
-          });
-
-
-        });
+        // // 자바스크립트 모바일 메뉴 온/오프
+        // document.addEventListener('DOMContentLoaded', function(){
+        //
+        //   var design_list_3  = document.querySelectorAll('.design_list_3');
+        //   // 왼쪽 상단 메뉴 버튼 클릭
+        //
+        //       document.querySelector('.design_list_3').classList.contains('active_2') ){
+        //         //disign_contaner_nav_active
+        //         document.querySelector('.disign_contaner').classList.remove('disign_contaner_nav_active');
+        //
+        //       } else {
+        //         //메뉴펼처짐
+        //         document.querySelector('.disign_contaner').classList.add('disign_contaner_nav_active');
+        //
+        //       }
+        //     });
