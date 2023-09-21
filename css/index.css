@@ -32,6 +32,9 @@ html, body{
   font-family: 'MonaSans';
   min-height: 667px;
   min-width: 375px;
+  scroll-snap-type: y mandatory;
+  transition: all 0.8s linear;
+
 }
 
 .mobile_menu{
@@ -162,10 +165,13 @@ html, body{
   /* background-color: rgba(10, 10, 21 , 0.8); */
   grid-area: head;
   align-self: center;
+  padding:  0 0 0 8%;
+  box-sizing: border-box;
 }
 .disign_contaner_header > h2 {
   color: #fff;
   font-size: 25px;
+  transition: 0.5s;
 }
 
 .disign_contaner_X {
@@ -187,7 +193,7 @@ html, body{
 .disign_contaner_body{
   grid-area: body;
   /* background-color: red; */
-  padding: 25px;
+  /* padding: 25px; */
   box-sizing: border-box;
   overflow-y: scroll;
   -ms-overflow-style: none;
@@ -202,9 +208,11 @@ html, body{
 
 .disign_contaner_body_con {
   width: 100%;
+  width: 75%;
+  margin: 0 auto;
 }
 #disign_con_2{
-  display: none;
+  /* display: none; */
 }
 
 header{
@@ -224,7 +232,7 @@ header >h2{
   color: #8a919f;
   letter-spacing: -1.3px;
   z-index: 99999;
-    font-weight: lighter;
+  font-weight: lighter;
 
 }
 
@@ -286,13 +294,15 @@ header ul li a:after{
   background: #000;
   display: grid;
   overflow:hidden;
-  transition: transform 0.5s ease;
+  transition: all 0.8s linear;
+   scroll-snap-align: start;
 }
 
 
 .screen-container {
   width: 100%;
   height: 100%;
+  transition: all 0.8s linear;
 }
 
 

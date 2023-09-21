@@ -1,22 +1,22 @@
   // 한 화면씩 이동.
-
-  window.addEventListener("wheel", function(event) {
-
-    // console.log("현재 스크롤 위치: " + scrollY + "px");
-    // console.log("현재 화면 크기: " + window.innerHeight + "px");
-    // console.log("페이지: " + scrollY / window.innerHeight);
-
-    var pageNumber = scrollY / window.innerHeight;
-    	if(event.deltaY < 0){
-         window.scrollBy(0, -(window.innerHeight - 100));
-      }else {
-        // scrollBy(x,y) - 수직 스크롤양 / 수평 스크롤양 지정
-        window.scrollBy (0, window.innerHeight - 100);
-      }
-  });
-
-
-
+  //
+  // window.addEventListener("wheel", function(event) {
+  //
+  //   // console.log("현재 스크롤 위치: " + scrollY + "px");
+  //   // console.log("현재 화면 크기: " + window.innerHeight + "px");
+  //   // console.log("페이지: " + scrollY / window.innerHeight);
+  //
+  //   var pageNumber = scrollY / window.innerHeight;
+  //   	if(event.deltaY < 0){
+  //        window.scrollBy(0, -(window.innerHeight - 100));
+  //     }else {
+  //       // scrollBy(x,y) - 수직 스크롤양 / 수평 스크롤양 지정
+  //       window.scrollBy (0, window.innerHeight - 100);
+  //     }
+  // });
+  //
+  //
+  //
 
 
 
@@ -171,8 +171,6 @@ document.addEventListener('DOMContentLoaded', function(){
        });
          // 클릭한 li 요소에 'active_2' 클래스를 추가합니다.
          a.classList.add('active_2');
-
-         const rec_3 = document.querySelector('#rec_3');
          const newBackgroundImageUrl = 'url(./img/index/web_list_1.png)';
          const webListImages = [
            'url(./img/index/web_list_1.png)','url(./img/index/web_list_2.png)'
@@ -183,6 +181,14 @@ document.addEventListener('DOMContentLoaded', function(){
          const studyListImages = [
            'url(./img/index/study_list_1.png)','url(./img/index/study_list_2.png)','url(./img/index/study_list_3.png)'
          ];
+         const disign_con_3 = document.querySelector('#disign_con_3');
+         const disign_con_2 = document.querySelector('#disign_con_2');
+         const disign_title = document.querySelector('.disign_title');
+         const rec_3 = document.querySelector('#rec_3');
+
+
+
+
 
          if (a == web_list_1) {
            rec_3.style.backgroundImage = webListImages[0];
@@ -200,11 +206,23 @@ document.addEventListener('DOMContentLoaded', function(){
         } else if (a == design_list_2) {
             rec_3.style.backgroundImage = designListImages[1];
             event.preventDefault(); // 기본 동작(새 창 열림)을 막음
+            disign_title.textContent = '뷰티포스팅';
+            disign_con_2.style.display = 'block';
+            disign_con_3.style.display = 'none';
+            window.scrollTo({
+           top: 0,
+           behavior: "smooth" // 부드러운 스크롤 효과를 사용할 수 있습니다.
             designList3ClickHandler();
 
         } else if (a == design_list_3) {
             rec_3.style.backgroundImage = designListImages[2];
             event.preventDefault(); // 기본 동작(새 창 열림)을 막음
+            disign_title.textContent = '포트폴리오 초기 디자인';
+            disign_con_2.style.display = 'none';
+            disign_con_3.style.display = 'block';
+            window.scrollTo({
+           top: 0,
+           behavior: "smooth" // 부드러운 스크롤 효과를 사용할 수 있습니다.
             designList3ClickHandler();
 
           }else if ( a == study_list_1 ) {
@@ -221,15 +239,10 @@ document.addEventListener('DOMContentLoaded', function(){
       disign_contaner_1.classList.add("disign_contaner_nav_active");
       // disign_contaner_1 요소에만 overflow를 auto로 설정
       disign_contaner_1.style.overflow = "auto";
+
       event.preventDefault(); // 기본 동작(새 창 열림)을 막음
   }
-  function designList3ClickHandler_2() {
-    const disign_contaner_1 = document.getElementById("disign_contaner_2");
-    disign_contaner_1.classList.add("disign_contaner_nav_active");
-    // disign_contaner_1 요소에만 overflow를 auto로 설정
-    disign_contaner_1.style.overflow = "auto";
-    event.preventDefault(); // 기본 동작(새 창 열림)을 막음
-}
+
 });
 
 // 디자인 페이지가 열렸을때 스크롤을 고정하는 코드이다.
@@ -240,7 +253,7 @@ window.addEventListener("scroll", function(event) {
     window.scrollTo(0, innerHeight); //window.scrollTo는 스크롤의 위치를 변경한다.
   }
 });
-querySelectorAll('.potfolio_list');
+// querySelectorAll('.potfolio_list');
 
 
         // // 자바스크립트 모바일 메뉴 온/오프
