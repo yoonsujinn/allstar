@@ -1,6 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
   const study_li = document.querySelectorAll('.study_li');
   const right_con = document.querySelectorAll('.right_con');
+  const scroll_topp = document.querySelector('.scroll_topp');
+  const scroll_topp2 = document.querySelector('.scroll_topp2');
+  const scroll_topp3 = document.querySelector('.scroll_topp3');
+  const scroll_topp4 = document.querySelector('.scroll_topp4');
+  const scroll_topp5 = document.querySelector('.scroll_topp5');
+  const scroll_topp6 = document.querySelector('.scroll_topp6');
+  const scroll_topp7 = document.querySelector('.scroll_topp7');
 
   study_li.forEach((a) => {
     a.addEventListener("click", function(e) {
@@ -16,18 +23,46 @@ document.addEventListener("DOMContentLoaded", function() {
 
       if( a == study_li_1) {
         right_con_1.classList.add('active_3');
+        scroll_topp.scrollIntoView({
+         top: 0,
+         behavior: "smooth"
+        });
       }else if (a == study_li_2) {
         right_con_2.classList.add('active_3');
+        scroll_topp2.scrollIntoView({
+          top: 0,
+          behavior: "smooth"
+        });
       }else if (a == study_li_3) {
         right_con_3.classList.add('active_3');
+        scroll_topp3.scrollIntoView({
+          top: 0,
+          behavior: "smooth"
+        });
       }else if (a == study_li_4) {
         right_con_4.classList.add('active_3');
+        scroll_topp4.scrollIntoView({
+          top: 0,
+          behavior: "smooth"
+        });
       }else if (a == study_li_5) {
         right_con_5.classList.add('active_3');
+        scroll_topp5.scrollIntoView({
+          top: 0,
+          behavior: "smooth"
+        });
       }else if (a == study_li_6) {
         right_con_6.classList.add('active_3');
+        scroll_topp6.scrollIntoView({
+          top: 0,
+          behavior: "smooth"
+        });
       }else if (a == study_li_7) {
         right_con_7.classList.add('active_3');
+        scroll_topp7.scrollIntoView({
+          top: 0,
+          behavior: "smooth"
+        });
       }
       });
     });
@@ -59,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if( a == nav_2_li_1) {
           study_title.textContent = 'Study #Html & Css';
           bar_1.classList.add('active_5');
+
 
         }else if (a == nav_2_li_2) {
           study_title.textContent = 'Study #JavaScript';

@@ -13,17 +13,11 @@
         // in_1변수를 선언 > input_11 에 입력된 값을 가져온다.
       arr[i] = in_1;
       // console.log(random1+"랜덤숫자");
-      console.log(min+"작은숫자");
+
       // console.log(arr+"배열");`1`
 
-    // if(random1 > min){
-    //   min = in_1;
-    //   $(".correct_1_2").text( "정답은 "+min+" 보다 커요.");
-    //
-    //   console.log(random1);
-      console.log(random1);
-    // }
 
+      console.log(random1);
 
 
       if(i<4 && random1 < in_1 ) {
@@ -45,7 +39,7 @@
       } else if (random1 == in_1){
           arr[i] = in_1;
           $(".correct_1").text("짝짝짝")
-          $(".correct_2").text("정답입니다!");
+          $(".correct_2").text(random1+"은 정답입니다!");
           $('#input_11').prop('disabled', false);
           document.getElementById("input_11").disabled = true;
 

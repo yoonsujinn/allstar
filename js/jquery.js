@@ -151,6 +151,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
           s.classList.add('active_1');
           rec_3.style.backgroundImage = newBackgroundImageUrl;
+          document.getElementById('rec_3_wrap').onclick = null;
+
 
 
 
@@ -183,9 +185,10 @@ document.addEventListener('DOMContentLoaded', function(){
          ];
          const disign_con_3 = document.querySelector('#disign_con_3');
          const disign_con_2 = document.querySelector('#disign_con_2');
+         const disign_con_1 = document.querySelector('#disign_con_1');
          const disign_title = document.querySelector('.disign_title');
          const rec_3 = document.querySelector('#rec_3');
-
+         const ttop = document.querySelector('.ttop');
 
 
 
@@ -203,15 +206,30 @@ document.addEventListener('DOMContentLoaded', function(){
             event.preventDefault(); // 기본 동작을 막음
             window.open("./html/game/guess_the_number_game.html", "_blank");
         };
+        }else if (a == design_list_1) {
+            rec_3.style.backgroundImage = designListImages[0];
+            event.preventDefault(); // 기본 동작(새 창 열림)을 막음
+            disign_title.textContent = '병원 이미지 작업';
+            disign_con_1.style.display = 'block';
+            disign_con_2.style.display = 'none';
+            disign_con_3.style.display = 'none';
+            ttop.scrollIntoView({
+             top: 0,
+             behavior: "smooth" // 부드러운 스크롤 효과를 사용할 수 있습니다.
+            });
+            designList3ClickHandler();
+
         } else if (a == design_list_2) {
             rec_3.style.backgroundImage = designListImages[1];
             event.preventDefault(); // 기본 동작(새 창 열림)을 막음
             disign_title.textContent = '뷰티포스팅';
             disign_con_2.style.display = 'block';
             disign_con_3.style.display = 'none';
-            window.scrollTo({
-           top: 0,
-           behavior: "smooth" // 부드러운 스크롤 효과를 사용할 수 있습니다.
+            disign_con_1.style.display = 'none';
+            ttop.scrollIntoView({
+             top: 0,
+             behavior: "smooth" // 부드러운 스크롤 효과를 사용할 수 있습니다.
+            });
             designList3ClickHandler();
 
         } else if (a == design_list_3) {
@@ -220,9 +238,11 @@ document.addEventListener('DOMContentLoaded', function(){
             disign_title.textContent = '포트폴리오 초기 디자인';
             disign_con_2.style.display = 'none';
             disign_con_3.style.display = 'block';
-            window.scrollTo({
-           top: 0,
-           behavior: "smooth" // 부드러운 스크롤 효과를 사용할 수 있습니다.
+            disign_con_1.style.display = 'none';
+            ttop.scrollIntoView({
+             top: 0,
+             behavior: "smooth" // 부드러운 스크롤 효과를 사용할 수 있습니다.
+            });
             designList3ClickHandler();
 
           }else if ( a == study_list_1 ) {
