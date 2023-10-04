@@ -109,7 +109,7 @@ html, body{
   width: 78%;
   background-color: rgba(10, 10, 21 , 0.8);
   transition: 0.8s;
-  left: -85%;
+  left: -111%;
   opacity: 0;
   z-index: 9999;
   display: grid;
