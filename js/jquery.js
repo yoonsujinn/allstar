@@ -22,9 +22,7 @@
 
 
   window.addEventListener("scroll", function() {
-    let page_0 = {min: 0,max: 0.8111111};
-    let page_1 = {min: 0.9,max: 1.5};
-    let page_2_5 = {min: 1.6,max: 4};
+
 
     var scrollY = window.scrollY; // 수직 스크롤 위치
     var pageNumber = scrollY / window.innerHeight;
@@ -34,7 +32,7 @@
     const page_2_work = document.querySelectorAll('.page_2_work');
 
     // 0페이지일때
-    if (pageNumber == page_0 || pageNumber == 0) {
+    if ( pageNumber === 0) {
         profile_li.forEach((li) => {
             li.style.transform = 'translate(90%, 0%)';
             li.style.opacity = '0';
@@ -49,7 +47,7 @@
         });
         // 1페이지일때
     // } else if (pageNumber > 0.9 || pageNumber >= 1.9) {
-    } else if (pageNumber == page_1 || pageNumber == 1 ) {
+    } else if (pageNumber === 1 ) {
 
         profile_li.forEach((li) => {
             li.style.transform = 'translate(0%, 0%)';
@@ -65,7 +63,7 @@
         });
         // 2~3페이지일때
     // } else if (pageNumber >= 2 || pageNumber == 3 || pageNumber == 4) {
-  } else if (pageNumber == page_2_5 || pageNumber == 2) {
+  } else if (pageNumber === 2) {
 
         profile_li.forEach((li) => {
             li.style.transform = 'translate(90%, 0%)';
