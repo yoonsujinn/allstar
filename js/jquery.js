@@ -31,8 +31,11 @@
     const page_2_Certificate = document.querySelectorAll('.page_2_Certificate');
     const page_2_work = document.querySelectorAll('.page_2_work');
 
+    console.log(scrollY);
+    console.log(pageNumber);
+
     // 0페이지일때
-    if ( pageNumber === 0) {
+    if ( pageNumber == 0) {
         profile_li.forEach((li) => {
             li.style.transform = 'translate(90%, 0%)';
             li.style.opacity = '0';
@@ -47,7 +50,7 @@
         });
         // 1페이지일때
     // } else if (pageNumber > 0.9 || pageNumber >= 1.9) {
-    } else if (pageNumber === 1 ) {
+    } else if (pageNumber == 1 ) {
 
         profile_li.forEach((li) => {
             li.style.transform = 'translate(0%, 0%)';
@@ -63,7 +66,7 @@
         });
         // 2~3페이지일때
     // } else if (pageNumber >= 2 || pageNumber == 3 || pageNumber == 4) {
-  } else if (pageNumber === 2) {
+  } else if (pageNumber == 2) {
 
         profile_li.forEach((li) => {
             li.style.transform = 'translate(90%, 0%)';
@@ -78,7 +81,38 @@
             e.style.transform = 'translate(10%, 0%)'; // transform 속성 변경
             e.style.opacity = '0'; // opacity 속성 변경
         });
-    }
+    }else if (pageNumber == 3) {
+
+          profile_li.forEach((li) => {
+              li.style.transform = 'translate(90%, 0%)';
+              li.style.opacity = '0';
+          });
+          page_2_Certificate.forEach((obj) => {
+              obj.style.transform = 'translate(9%, 0%)'; // transform 속성 변경
+              obj.style.opacity = '0'; // opacity 속성 변경
+
+          });
+          page_2_work.forEach((e) => {
+              e.style.transform = 'translate(10%, 0%)'; // transform 속성 변경
+              e.style.opacity = '0'; // opacity 속성 변경
+          });
+      }
+      else if (pageNumber == 4) {
+
+            profile_li.forEach((li) => {
+                li.style.transform = 'translate(90%, 0%)';
+                li.style.opacity = '0';
+            });
+            page_2_Certificate.forEach((obj) => {
+                obj.style.transform = 'translate(9%, 0%)'; // transform 속성 변경
+                obj.style.opacity = '0'; // opacity 속성 변경
+
+            });
+            page_2_work.forEach((e) => {
+                e.style.transform = 'translate(10%, 0%)'; // transform 속성 변경
+                e.style.opacity = '0'; // opacity 속성 변경
+            });
+        }
 
 });
 
@@ -118,13 +152,13 @@ document.addEventListener('DOMContentLoaded', function(){
     for (var i = 0; i < menuItems.length; i++) {
         menuItems[i].addEventListener('click', function(event) {
           // addEventListener는 이벤트를 처리하는 메서드중 하나다.
-            event.preventDefault();
+            // event.preventDefault();
             //preventDefault =  a링크이동을 막는다.
             var target = this.getAttribute('href');
             //this.getAttribute는 href 안에 들어있는 요소를 가져온다.
-            document.querySelector(target).scrollIntoView({
-                behavior: 'smooth'
-              });
+            // document.querySelector(target).scrollIntoView({
+            //     behavior: 'smooth'
+            //   });
               // Hide the mobile_side_menu
               document.querySelector('.mobile_side_menu').classList.remove('mobile_side_menu_on');
               document.querySelector('.mobile_menu').classList.remove('mobile_menu_on');

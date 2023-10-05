@@ -16,12 +16,8 @@ html, body{
   background-repeat: no-repeat;
   background-size: 100% 100%;
   display: grid;
-
   justify-items: center;
   align-items: center;
-  grid-template-areas:
-
-
 }
 
 
@@ -37,7 +33,6 @@ html, body{
 	background: url('../img/guess_the_number_game_1.png');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-  grid-area:wrap;
 }
 
 .wrap h2{
@@ -95,7 +90,6 @@ html, body{
 		width: 150px;
 		height: 39px;
 		background: rgba(255,255,255,0.3);
-};
 	}
 
 	.wrap .correct{
@@ -111,3 +105,38 @@ html, body{
 		font-size: 80px;
 		text-align: center;
 	}
+
+
+  @media screen and (min-width:1px) and (max-width:601px) {
+
+  .wrap{
+      width: 87%;
+      height: 77%;
+      display: grid;
+    }
+
+    .wrap h2{
+      font-size: 33px;
+    }
+
+    .wrap h3{
+      font-size: 18px;
+      padding: 0;
+    }
+
+    .rule {
+      font-size: 13px;
+    }
+
+    .wrap .correct_1_1, .correct_1_2, .correct_1_3{
+      font-size: 17px;
+    }
+
+    .wrap .correct_1{
+      font-size: 17px;
+    }
+    .wrap .correct_2{
+      font-size: 23px;
+    }
+
+}
