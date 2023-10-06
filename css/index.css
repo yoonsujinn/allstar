@@ -835,6 +835,17 @@ header ul li a:after{
   background-position-x: 50%;
   cursor: pointer;
 }
+/* 
+ #rec_3:after{
+   content: '';
+   background: red;
+   opacity: 5;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+ } */
 
   #page_4>#rec_1 > .rec_4_right{
     position: absolute;

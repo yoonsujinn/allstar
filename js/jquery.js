@@ -170,6 +170,8 @@ document.addEventListener('DOMContentLoaded', function(){
     // page_4_li active_1 on off
     document.addEventListener("DOMContentLoaded", function() {
       const page_4_li = document.querySelectorAll('.page_4_li');
+      const page_4_li_2 = document.querySelector('#page_4_li_2');
+      const rec_3_wrap = document.querySelector('#rec_3_wrap');
       const rec_3 = document.querySelector('#rec_3');
       const newBackgroundImageUrl = 'url(./img/index/rec_3_img_1.gif)';
 
@@ -183,9 +185,18 @@ document.addEventListener('DOMContentLoaded', function(){
 
           s.classList.add('active_1');
           rec_3.style.backgroundImage = newBackgroundImageUrl;
+
+          if (s==page_4_li_2) {
+            console.log(s);
+            rec_3_wrap.addEventListener('click', function(event) {
+          // 클릭 이벤트를 무시하고 아무 동작도 하지 않음
+          event.stopPropagation(); // 이벤트 전파(stopPropagation) 방지
+         event.preventDefault();  // 기본 동작 방지
+          // return false;
+        });
+
+          }
           document.getElementById('rec_3_wrap').onclick = null;
-
-
 
 
 
@@ -210,14 +221,18 @@ document.addEventListener('DOMContentLoaded', function(){
            'url(./img/index/web_list_1.png)','url(./img/index/web_list_2.png)'
          ];
          const designListImages = [
-           'url(./img/index/design_list_1.png)','url(./img/index/design_list_2.png)','url(./img/index/design_list_3.png)'
+           'url(./img/index/design_list_1.png)','url(./img/index/design_list_2.png)','url(./img/index/design_list_3.png)',
+           'url(./img/index/design_list_4.png)'
          ];
          const studyListImages = [
            'url(./img/index/study_list_1.png)','url(./img/index/study_list_2.png)','url(./img/index/study_list_3.png)'
          ];
-         const disign_con_3 = document.querySelector('#disign_con_3');
-         const disign_con_2 = document.querySelector('#disign_con_2');
+
+
          const disign_con_1 = document.querySelector('#disign_con_1');
+         const disign_con_2 = document.querySelector('#disign_con_2');
+         const disign_con_3 = document.querySelector('#disign_con_3');
+         const disign_con_4 = document.querySelector('#disign_con_4');
          const disign_title = document.querySelector('.disign_title');
          const rec_3 = document.querySelector('#rec_3');
          const ttop = document.querySelector('.ttop');
@@ -229,7 +244,7 @@ document.addEventListener('DOMContentLoaded', function(){
            rec_3.style.backgroundImage = webListImages[0];
             document.getElementById('rec_3_wrap').onclick = function() {
             event.preventDefault(); // 기본 동작을 막음
-             window.open("http://www.luminar.co.kr", "_blank");
+            window.open("http://www.luminar.co.kr", "_blank");
         };
         } else if (a == web_list_2) {
             rec_3.style.backgroundImage = webListImages[1];
@@ -245,19 +260,22 @@ document.addEventListener('DOMContentLoaded', function(){
             disign_con_1.style.display = 'block';
             disign_con_2.style.display = 'none';
             disign_con_3.style.display = 'none';
+            disign_con_4.style.display = 'none';
             ttop.scrollIntoView({
              top: 0,
              behavior: "smooth" // 부드러운 스크롤 효과를 사용할 수 있습니다.
             });
-            designList3ClickHandler();
+
+          designList3ClickHandler();
 
         } else if (a == design_list_2) {
             rec_3.style.backgroundImage = designListImages[1];
             event.preventDefault(); // 기본 동작(새 창 열림)을 막음
             disign_title.textContent = '뷰티포스팅';
+            disign_con_1.style.display = 'none';
             disign_con_2.style.display = 'block';
             disign_con_3.style.display = 'none';
-            disign_con_1.style.display = 'none';
+            disign_con_4.style.display = 'none';
             ttop.scrollIntoView({
              top: 0,
              behavior: "smooth" // 부드러운 스크롤 효과를 사용할 수 있습니다.
@@ -268,16 +286,32 @@ document.addEventListener('DOMContentLoaded', function(){
             rec_3.style.backgroundImage = designListImages[2];
             event.preventDefault(); // 기본 동작(새 창 열림)을 막음
             disign_title.textContent = '포트폴리오 초기 디자인';
+            disign_con_1.style.display = 'none';
             disign_con_2.style.display = 'none';
             disign_con_3.style.display = 'block';
-            disign_con_1.style.display = 'none';
+            disign_con_4.style.display = 'none';
             ttop.scrollIntoView({
              top: 0,
              behavior: "smooth" // 부드러운 스크롤 효과를 사용할 수 있습니다.
             });
             designList3ClickHandler();
 
-          }else if ( a == study_list_1 ) {
+          }else if (a == design_list_4) {
+              rec_3.style.backgroundImage = designListImages[3];
+              event.preventDefault(); // 기본 동작(새 창 열림)을 막음
+              disign_title.textContent = '이니스프리 홈페이지 리뉴얼';
+              disign_con_2.style.display = 'none';
+              disign_con_3.style.display = 'none';
+              disign_con_1.style.display = 'none';
+              disign_con_4.style.display = 'block';
+              ttop.scrollIntoView({
+               top: 0,
+               behavior: "smooth" // 부드러운 스크롤 효과를 사용할 수 있습니다.
+              });
+              designList3ClickHandler();
+
+            }
+          else if ( a == study_list_1 ) {
            rec_3.style.backgroundImage = studyListImages[0];
            document.getElementById('rec_3_wrap').onclick = function() {
            event.preventDefault(); // 기본 동작을 막음
