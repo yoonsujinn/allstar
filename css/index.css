@@ -572,7 +572,7 @@ header ul li a:after{
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow-style: none;
-  overflow: hidden;
+  overflow: scroll;
 
 }
 
@@ -711,7 +711,7 @@ header ul li a:after{
 	background-color: #161b22;
   position: relative;
 }
-#page_3_right > p{
+#page_3_right_p{
   color: #fff;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 100;
@@ -721,6 +721,8 @@ header ul li a:after{
   line-height: 33px;
   width: 92%;
   text-align: justify;
+  transform: translate(0, 100px);
+  transition: all 0.5s;
 }
 
 
@@ -732,6 +734,8 @@ header ul li a:after{
   column-gap: 15px;
   grid-template-columns: repeat(5, minmax(50px,auto));
   text-align: center;
+  transform: translate(0, 100px);
+  transition: all 0.4s;
 }
 
 #page_3_right > .page_3_right_tag > .Skill_obj{
@@ -835,7 +839,7 @@ header ul li a:after{
   background-position-x: 50%;
   cursor: pointer;
 }
-/* 
+/*
  #rec_3:after{
    content: '';
    background: red;

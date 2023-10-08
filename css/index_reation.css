@@ -56,7 +56,7 @@
     width: 450px;
   }
 
-  #page_3_right > p{
+  #page_3_right > p#page_3_right_p{
     padding: 100px 0px 0 50px;
     box-sizing: border-box;
     font-size: 18px;
@@ -243,7 +243,7 @@
   #page_3_left > img {
     width: 90%
   }
-  #page_3_right > p{
+  #page_3_right > p#page_3_right_p{
     padding: 140px 0px 0 30px;
     box-sizing: border-box;
     font-size: 17px;
@@ -464,7 +464,7 @@
   #page_3_left > img {
     width: 340px;
   }
-  #page_3_right > p{
+  #page_3_right > #page_3_right_p{
     padding: 110px 50px 0 50px;
     box-sizing: border-box;
     font-size: 18px;
@@ -756,7 +756,7 @@
     width: 67%;
     padding: 25px;
   }
-  #page_3_right > p{
+  #page_3_right > p#page_3_right_p{
     padding: 15px;
     box-sizing: border-box;
     font-size: 16px;
@@ -1113,7 +1113,7 @@
     width: 100%;
     height: 75%;
   }
-  #page_3_right > p{
+  #page_3_right > p#page_3_right_p{
     padding: 15px;
     box-sizing: border-box;
     font-size: 15px;

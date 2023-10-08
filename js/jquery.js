@@ -30,6 +30,10 @@
     const profile_li = document.querySelectorAll('.profile_li');
     const page_2_Certificate = document.querySelectorAll('.page_2_Certificate');
     const page_2_work = document.querySelectorAll('.page_2_work');
+    const page_3_right_p = document.querySelector('#page_3_right_p');
+    const page_3_right_tag = document.querySelector('.page_3_right_tag');
+
+
 
     console.log(scrollY);
     console.log(pageNumber);
@@ -52,6 +56,9 @@
     // } else if (pageNumber > 0.9 || pageNumber >= 1.9) {
     } else if (pageNumber == 1 ) {
 
+      page_3_right_p.style.transform = 'translate(0%, 100px)';
+      page_3_right_tag.style.transform = 'translate(0%, 100px)';
+
         profile_li.forEach((li) => {
             li.style.transform = 'translate(0%, 0%)';
             li.style.opacity = '1';
@@ -68,6 +75,9 @@
     // } else if (pageNumber >= 2 || pageNumber == 3 || pageNumber == 4) {
   } else if (pageNumber == 2) {
 
+        page_3_right_p.style.transform = 'translate(0%, 0%)';
+        page_3_right_tag.style.transform = 'translate(0%, 0%)';
+
         profile_li.forEach((li) => {
             li.style.transform = 'translate(90%, 0%)';
             li.style.opacity = '0';
@@ -82,6 +92,8 @@
             e.style.opacity = '0'; // opacity 속성 변경
         });
     }else if (pageNumber == 3) {
+      page_3_right_p.style.transform = 'translate(0%, 100px)';
+      page_3_right_tag.style.transform = 'translate(0%, 100px)';
 
           profile_li.forEach((li) => {
               li.style.transform = 'translate(90%, 0%)';
@@ -186,13 +198,16 @@ document.addEventListener('DOMContentLoaded', function(){
           s.classList.add('active_1');
           rec_3.style.backgroundImage = newBackgroundImageUrl;
 
+
           if (s==page_4_li_2) {
             console.log(s);
+            rec_3.style.cursor = 'auto';
             rec_3_wrap.addEventListener('click', function(event) {
-          // 클릭 이벤트를 무시하고 아무 동작도 하지 않음
-          event.stopPropagation(); // 이벤트 전파(stopPropagation) 방지
-         event.preventDefault();  // 기본 동작 방지
-          // return false;
+
+              // 클릭 이벤트를 무시하고 아무 동작도 하지 않음
+            event.stopPropagation(); // 이벤트 전파(stopPropagation) 방지
+            event.preventDefault();  // 기본 동작 방지
+            return false;
         });
 
           }
