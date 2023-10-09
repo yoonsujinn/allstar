@@ -4,11 +4,17 @@
 ul, li {list-style: none;}
 img{border: 0;}
 a {text-decoration: none;}
+/*
+font-family: 'NanumSquareNeoLight';
+font-family: 'NanumSquareNeo';
+font-family: 'NanumSquareNeoBold';
+font-family: 'NanumSquareNeoExtraBold';
+font-family: 'NanumSquareNeoHeavy'; */
 
 
 body{
   display:grid;
-  grid-template-rows: 50px 150px 500px auto;
+  grid-template-rows: 50px 150px 620px auto;
   grid-template-columns: auto 200px 880px 200px auto;
   justify-items: center;
   grid-template-areas:
@@ -17,24 +23,35 @@ body{
   'slide slide slide slide slide'
   'sale1 sale1 sale1 sale1 sale1'
   'sale2 sale2 sale2 sale2 sale2'
-  'photo_sale photo_sale photo_sale photo_sale photo_sale'
+  'photo_sale_back photo_sale_back photo_sale_back photo_sale_back photo_sale_back'
   'ranking ranking ranking ranking ranking'
   'benefit benefit benefit benefit benefit'
   'active_sale active_sale active_sale active_sale active_sale'
   'footer footer footer footer footer';
+  font-family: 'NanumSquareNeo';
 }
 
 .head_bar{
   background:  #000;
   height: 50px;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   grid-area: head_bar;
+}
+
+/* head_bar 시작 */
+.head_bar > h5 {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 100;
 }
 
 header{
   width: 1280px;
   min-width: 1280px;
-  background: red;
   grid-area: header;
   display: flex;
   justify-content: space-evenly;
@@ -45,34 +62,97 @@ header{
 .header_top, .header_bottom{
   width: 100%;
   height: 50%;
-  box-sizing: border-box;
-  border: 1px solid #444;
   display: flex;
   justify-content: space-between;
 
-
+  box-sizing: border-box;
 }
 
-.header_left{
+.header_top_left{
   width: 200px;
   height: 100%;
-  background: #333;
   box-sizing: border-box;
-  border: 1px solid #444;
+  padding: 46px 0 0 0;
+
 }
-.header_center{
+.header_bottom_left{
+  width: 200px;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.header_bottom_left p{
+  font-weight: 600;
+  margin: 0 0 0 4px;
+}
+.header_top_center{
   width: 500px;
   height: 100%;
-  background: #111;
   box-sizing: border-box;
-  border: 1px solid #444;
+  border-bottom: 1px solid #444;
+  padding: 46px 0 0 0;
 }
-.header_right{
+.header_top_center p{
+  color: #9d9d9d;
+  font-size: 14px;
+  width: 95%;
+  float: left;
+}
+.header_bottom_center{
+  width: 500px;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+}
+.header_bottom_center ul{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header_bottom_center ul li{
+    font-weight: 600;
+}
+
+
+.header_top_right{
   width: 200px;
   height: 100%;
-  background: #222;
   box-sizing: border-box;
-  border: 1px solid #444;
+  padding: 20px 0 0 0;
+
+  display: flex;
+}
+
+.header_top_right_con1{
+  width: 33.3333%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  }
+
+.header_top_right_con1 p{
+  font-size: 12px;
+  color: #9d9d9d;
+}
+
+.header_bottom_right{
+  width: 200px;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_bottom_right > p{
+  font-weight: 600;
 }
 
 section{
@@ -85,6 +165,7 @@ section{
   width: 100%;
   grid-area: slide;
   margin: 0 0 50px 0;
+  background-image: url("./innisfree_img/BM11_657_left_pc.jpg");
 }
 
 .slide_page_number {
@@ -115,11 +196,14 @@ section#season{
   grid-area: sale2;
 }
 
-.sale_top{
+.greentop{
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  height: 50px;
+  border: 1px solid red;
+  box-sizing: border-border-box;
 }
 .title_1{
   display: block;
@@ -140,12 +224,39 @@ section#season{
   box-sizing: border-box;
 }
 
-#photo_sale{
+.photo_sale_back{
+  width: 100%;
+  height: 300px;
+  background: red;
+  grid-area: photo_sale_back;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 250px 0 50px 0;
+}
+
+.photo_sale{
   background-color: #777;
-  grid-area: photo_sale;
   width: 1280px;
   min-width: 1280px;
   height: 500px;
+  display: flex;
+
+
+}
+
+
+.photo_sale_left, .photo_sale_right{
+  width: 50%;
+  height: 100%;
+
+  box-sizing: border-box;
+}
+.photo_sale_img{
+  width: 100%;
+  height: 60%;
+  box-sizing: border-box;
+  border : 1px solid #555;
 }
 
 #ranking{
@@ -153,7 +264,47 @@ section#season{
   grid-area: ranking;
   width: 1280px;
   min-width: 1280px;
-  height: 500px;
+  height: 760px;
+  display: flex;
+  flex-direction: column;
+}
+
+#ranking_ul{
+  width: 100%;
+  height: 50px;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+
+}
+
+#ranking_ul > li{
+  width: 10%;
+  height: 50px;
+  float: left;
+  margin: 0 10px 0 0 0;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.ranking_con_wrap{
+  height: 87%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+}
+.ranking_con{
+  width: 25%;
+  height:50%;
+  box-sizing: border-box;
+  border: 1px solid #fff;
 }
 
 #benefit{
@@ -165,12 +316,50 @@ section#season{
 
 }
 
+.benefit_con_wrap{
+  height: 90%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+}
+.benefit_con{
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  width: 33.33333%;
+  height: 50%;
+}
 #active_sale{
   background-color: red;
   grid-area: active_sale;
   width: 1280px;
   min-width: 1280px;
-  height: 500px;
+  height: 700px;
+}
+.active_sale_con{
+  width: 50%;
+  height: 100%;
+  float: left;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+}
+.active_sale_img_wrap{
+  width: 100%;
+  height: 400px;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+
+}
+.active_sale_title{
+  width: 100%;
+  height: 50px;
+    border: 1px solid #fff;
+}
+.active_sale_tag_wrap{
+  width: 100%;
+  height: 8%;
+    border: 1px solid #fff;
 }
 
 footer{
@@ -181,11 +370,23 @@ footer{
   height: 500px;
 }
 
+.foot_top{
+  width: 100%;
+  height: 100px;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: space-around;
+    align-items: baseline;
+}
 
-/* head_bar 시작 */
-.head_bar > h5 {
-  display: block;
-  height: 100%;
-  background-color: #777;
-  margin: 0 auto;
+.foot_bottom{
+  background: #ededed;
+  width: 100%;
+  height: 300px;
+
+}
+
+#foot_bottom_ul{
+  width: 100%;
+  background-color: red;
 }
