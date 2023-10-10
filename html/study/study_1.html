@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>studyPage</title>
-    <link rel="stylesheet" href="../../css/study/study_1.css">
+    <link rel="stylesheet" href="./study_1.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script type="text/javascript" src="../../js/study_1.js"></script>
   </head>
@@ -458,6 +458,7 @@
             </div>
 
           </div>
+
           <!-- 그리드 공부 -->
           <div class="right_con" id="right_con_2">
             <div class="scroll_topp2"></div>
@@ -465,7 +466,7 @@
             <p>
               <b>css grid는 2차원 행과 열 의 레이아웃 시스템을
               제공한다.</b><br/><br/>
-              <img src="../../img/study/grid.jpg" alt="gr"><br/><br/>
+              <img src="./study_img/grid.jpg" alt="gr"><br/><br/>
 
               <b>grid container</b>:display:grid를 적용하는 grid의 전체영역<br/>
               grid 컨테이너 안의 요소들이 grid 규칙이 영향을 받아 정렬된다고 생각하면 됨.<br/><br/>
@@ -585,7 +586,7 @@
             <div class="scroll_topp3"></div>
             <p>태그의 배경을 지정하는 백그라운드 속성은 쉬운거같으면서 은근히 어렵다.
               border 속성처럼 상세 속성을 한번에 사용할 수 있다.<br/>
-              background: yellow url('/images/attach/google.png') no-repeat center center;<br/>
+              background: yellow url('./images/attach/google.png') no-repeat center center;<br/>
               color / image / repeat / position-y / position-x 순 이다.<br/>
             </p>
 
@@ -636,7 +637,7 @@
               <b>animation-duration </b> :  애니메이션 지속 시간을 정해준다.<br>
               <b>@keyframes </b> 애니메이션을 지속하는 시간에 동작을 정해준다..<br>
             </p>
-            <img src="../../img/study/ani.jpg" alt="ani">
+            <img src="./study_img/ani.jpg" alt="ani" id="ani">
 
             <p>
               <b>animation-delay</b> 애니메이션 시작하기 전 딜레이 시간을 지정 한다..<br>
@@ -662,27 +663,27 @@
       <b>getElementById</b> 메서드로 'id'요소를 선택할 수 있다.
     </p>
     <pre class="study_page_span">
-      const element = document.getElementById('elementId');</pre>
+const element = document.getElementById('elementId');</pre>
     <p>
       <b>getElementsByClassName</b> 메서드로 'class'요소를 선택할 수 있다.
     </p>
     <pre class="study_page_span">
-      const elements = document.getElementsByClassName('classname');</pre>
+const elements = document.getElementsByClassName('classname');</pre>
     <p>
       <b>getElementsByTagName</b> 메서드로 '태그' 요소를 선택할 수 있다..p/span 등
     </p>
     <pre class="study_page_span">
-      const elements = document.getElementsByTagName('tagname');</pre>
+const elements = document.getElementsByTagName('tagname');</pre>
     <p>
       <b>querySelector</b> 메서드로 'css선택자'의 첫번째 요소를 선택할 수 있다.
     </p>
     <pre class="study_page_span">
-      const elements = documents = document.querySelector('cssSelector')</pre>
+const elements = documents = document.querySelector('cssSelector')</pre>
     <p>
       <b>querySelectolAll</b> 메서드로 'css선택자'의 '모든' 요소를 선택할 수 있다.
     </p>
     <pre class="study_page_span">
-      const elements = documen.querySelectorAll('elementName');
+const elements = documen.querySelectorAll('elementName');
     </pre>
 
   </div>
@@ -753,23 +754,23 @@
   });</pre>
   <h3>스크롤 이벤트 막기</h3>
   <pre class="study_page_span">
-    window.addEventListener("scroll", function() {
-    var scrollPosition = window.scrollY;
+      window.addEventListener("scroll", function() {
+      var scrollPosition = window.scrollY;
 
-    if (scrollPosition > 500) {
-        // 스크롤 위치가 500px 이상인 경우
-        // 원하는 동작을 추가하면 된다.
-    }
-});</pre>
-<h3>스크롤 위치 조정하기.</h3>
-<img src="../../img/study/scrollto.jpg" alt="">
-<p>scrollTo는 스크롤의 위치를 조정한다.</p>
+      if (scrollPosition > 500) {
+          // 스크롤 위치가 500px 이상인 경우
+          // 원하는 동작을 추가하면 된다.
+      }
+  });</pre>
+  <h3>스크롤 위치 조정하기.</h3>
+  <img src="./study_img/study/scrollto.jpg" alt="">
+  <p>scrollTo는 스크롤의 위치를 조정한다.</p>
 
-</div>
-<div class="right_con" id="right_con_8">right_con_8</div>
+  </div>
+  <div class="right_con" id="right_con_8">right_con_8</div>
 
 
-</div>
+  </div>
 
 
           <!-- <div class="right_con" id="right_con_1">

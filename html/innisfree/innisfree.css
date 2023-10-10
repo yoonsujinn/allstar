@@ -184,11 +184,10 @@ section.sale{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
 }
-
 section#mascara{
-  background-color: #999;
+  /* border: 1px solid #000; */
+  box-sizing: border-box;
   grid-area: sale1;
 }
 section#season{
@@ -201,28 +200,108 @@ section#season{
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
-  border: 1px solid red;
-  box-sizing: border-border-box;
+  height: 100px;
+  font-size: 21px;
+  color: #246a4e;
 }
 .title_1{
   display: block;
   width: 80%;
   display: block;
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
   box-sizing: border-box;
 }
 .more{
   height: 40px;
-  width: 100px;
+  width: 140px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'NanumSquareNeo';
+  background: #fff;
 }
 
 .sale_con{
-  width: 25%;
-  height: 92%;
-  border: 1px solid #fff;
+  width: 21%;
+  height: 90%;
+  border: 1px solid #000;
   box-sizing: border-box;
+  margin: 0 4% 0 0;
 }
+.sale_con > .sale_con_img{
+  width: 100%;
+  height: 60%;
+  background-position-x: 0;
+  background-position-y: 53%;
+  background-size: 100%;
+  position: relative;
+  margin: 0 0 10% 0;
+}
+.sale_con_hover{
+  width: 100%;
+  height: 100%;
+  background: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 100%;
+  opacity: 0;
+  height 0.3s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.sale_con_hover:hover{
+  opacity: 1;
+  height: 100%;
+}
+
+
+
+#sale_con_img_1{
+  background-image: url("./innisfree_img/36116_l_S_240.jpg");
+}
+#sale_con_hover_1{
+  background-image: url("./innisfree_img/36117_l1_S_240.jpg");
+}
+
+#sale_con_img_2{
+  background-image: url("./innisfree_img/36116_l_S_240.jpg");
+}
+#sale_con_img_3{
+  background-image: url("./innisfree_img/35696_l_S_240.jpg");
+  background-position-y: 46%;
+}
+
+.sale_con img{
+  width: 100%;
+}
+.sale_name{
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.sale_grade{
+  font-size: 13px;
+  padding: 5px 0 5px 0;
+
+}
+.price > strong{
+  font-size: 20px;
+}
+.price > .cost{
+  text-decoration-line: line-through;
+  color:#707070;
+  font-size: 14px;
+  padding: 0 5px 0 5px;
+}
+.price > .sale{
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+
+
 
 .photo_sale_back{
   width: 100%;
