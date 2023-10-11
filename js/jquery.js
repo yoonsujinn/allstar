@@ -182,10 +182,15 @@ document.addEventListener('DOMContentLoaded', function(){
     // page_4_li active_1 on off
     document.addEventListener("DOMContentLoaded", function() {
       const page_4_li = document.querySelectorAll('.page_4_li');
+      const page_4_li_1 = document.querySelector('#page_4_li_1');
       const page_4_li_2 = document.querySelector('#page_4_li_2');
+      const page_4_li_3 = document.querySelector('#page_4_li_3');
       const rec_3_wrap = document.querySelector('#rec_3_wrap');
       const rec_3 = document.querySelector('#rec_3');
       const newBackgroundImageUrl = 'url(./img/index/rec_3_img_1.gif)';
+      const rec_4_right_2_active_1 = document.getElementById('rec_4_right_2_active_1')
+      const rec_4_right_2_active_2 = document.getElementById('rec_4_right_2_active_2')
+      const rec_4_right_2_active_3 = document.getElementById('rec_4_right_2_active_3')
 
       page_4_li.forEach((s, index) => {
         s.addEventListener("click", function() {
@@ -202,19 +207,19 @@ document.addEventListener('DOMContentLoaded', function(){
           if (s==page_4_li_2) {
             console.log(s);
             rec_3.style.cursor = 'auto';
+            rec_4_right_2_active_2.textContent = '직접 디자인하여 제작한 이미지입니다. 마케팅업무를 위해 제작한 이미지와 포트폴리오 작업에 필요한 이미지들을 제작하였습니다.';
             rec_3_wrap.addEventListener('click', function(event) {
-
               // 클릭 이벤트를 무시하고 아무 동작도 하지 않음
             event.stopPropagation(); // 이벤트 전파(stopPropagation) 방지
             event.preventDefault();  // 기본 동작 방지
             return false;
-        });
-
+          });
+          }else if (s==page_4_li_1){
+            rec_4_right_2_active_1.textContent = '개인적으로 마크업한 웹 페이지와 업무상 제작한 프로젝트를 확인하실 수 있습니다.';
+          }else if (s==page_4_li_3){
+            rec_4_right_2_active_3.textContent = '프론트엔드직무에 준비하며 공부한 내용들을 정리했습니다.복습이 편리하도록 심플한 레이아웃으로 마크업한것이 특징입니다..';
           }
           document.getElementById('rec_3_wrap').onclick = null;
-
-
-
         });
       });
     });
@@ -256,12 +261,14 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
          if (a == web_list_1) {
+           rec_4_right_2_active_1.textContent = '근무처에서 제작한 홈페이지입니다. 전체적인 디자인과 기능을 개발하여 오랜기간이 소요되었습니다. 제작 이후에도 지속적으로 유지보수하였습니다. ';
            rec_3.style.backgroundImage = webListImages[0];
             document.getElementById('rec_3_wrap').onclick = function() {
             event.preventDefault(); // 기본 동작을 막음
             window.open("http://www.luminar.co.kr", "_blank");
         };
         } else if (a == web_list_2) {
+          rec_4_right_2_active_1.textContent = '자바스크립트 기본 문법에 익숙해지기 위해 제작한 게임입니다. 랜덤으로 정해지는 숫자를 5번 안에 맞춰야 합니다.'
             rec_3.style.backgroundImage = webListImages[1];
             // rec_3_wrap.href = "./html/game/guess_the_number_game.html";
             document.getElementById('rec_3_wrap').onclick = function() {
@@ -311,7 +318,7 @@ document.addEventListener('DOMContentLoaded', function(){
             });
             designList3ClickHandler();
 
-          }else if (a == design_list_4) {
+          } else if (a == design_list_4) {
               rec_3.style.backgroundImage = designListImages[3];
               event.preventDefault(); // 기본 동작(새 창 열림)을 막음
               disign_title.textContent = '이니스프리 홈페이지 리뉴얼';
@@ -325,14 +332,21 @@ document.addEventListener('DOMContentLoaded', function(){
               });
               designList3ClickHandler();
 
-            }
-          else if ( a == study_list_1 ) {
+        } else if ( a == study_list_1 ) {
+          rec_4_right_2_active_3.textContent = '프론트앤드 직무에 꼭 필요한 html css js 대해 기본적인 내용을 정리하고 있습니다.';
            rec_3.style.backgroundImage = studyListImages[0];
-           document.getElementById('rec_3_wrap').onclick = function() {
-           event.preventDefault(); // 기본 동작을 막음
-           window.open("./html/study/study_1.html", "_blank");
-         }
-       }
+             document.getElementById('rec_3_wrap').onclick = function() {
+             event.preventDefault(); // 기본 동작을 막음
+             window.open("./html/study/study_1.html", "_blank");
+           }
+       } else if ( a == study_list_2 ) {
+        rec_4_right_2_active_3.textContent = '정보처리산업기사를 공부하며 정리한 내용입니다. C Java 언어, 소프트웨어공학과,DAtabase의 기본 내용 SQL 문법, 서브넷마스크 계산방법 등의 내용이 포함되어 있습니다..';
+        rec_3.style.backgroundImage = studyListImages[1];
+          document.getElementById('rec_3_wrap').onclick = function() {
+          event.preventDefault(); // 기본 동작을 막음
+          window.open("./html/study/study_2.html", "_blank");
+        }
+    }
       });
     });
     function designList3ClickHandler() {

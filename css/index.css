@@ -829,7 +829,7 @@ header ul li a:after{
   left: 400px;
   top: 84px;
   -webkit-text-stroke-width: 3px !important;
-  transition: all 1s !important;
+  transition: all 0.5s !important;
   opacity: 1  !important;
   background-color: #000;
   background-image: url("../img/index/rec_3_img_1.gif");
@@ -857,8 +857,9 @@ header ul li a:after{
     left: 150%;
     width: 500px;
     height: 307px;
-    /* background: rgba(112, 15, 34, 0.4); */
     transition: all 0.8s ease;
+    display: flex;
+    flex-direction: column;
 
   }
 
@@ -872,14 +873,14 @@ header ul li a:after{
 
 
   #page_4>#rec_1 > .rec_4_right > p{
-
     color: #fff;
     font-family: 'Noto Sans KR', sans-serif;
-    text-align: right;
+    text-align: justify;
     font-size: 19px;
     font-weight: 100;
     position: relative;
     overflow-y: auto;
+    font-weight: 300;
     -ms-overflow-style: none;
     scrollbar-width: none;
     overflow-style: none;
@@ -889,6 +890,15 @@ header ul li a:after{
 #page_4>#rec_1 > .rec_4_right > p::-webkit-scrollbar {
   display: none; /* 크롬, 사파리, 오페라 */
 }
+#page_4>#rec_1 > .rec_4_right > span{
+  color: #ff5e82;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  text-align: left;
+  font-size: 17px;
+  transition: all 0.5s ease;
+  }
 
 #page_4>#rec_1 > .rec_4_right > ul li.potfolio_list{
   color: #3e79f1;

@@ -86,22 +86,22 @@ section#left nav .nav_2 ul {
   position: absolute;
   left: 100%;
   top: 50%;
-  transform: translate(0, -154%);
+  transform: translate(0, -50%);
 }
 
 section#left nav .nav_2 ul li {
   color: #000;
   font-size: 20px;
-  padding: 0 0 10px 10px;
+  padding: 0 0 10px 20px;
   width : 150px;
 }
 .active_1 {
   /* font-size: 24px; */
   font-weight: bold;
 }
-section#left nav .nav_2 ul li:nth-child(2) {
+/* section#left nav .nav_2 ul li:nth-child(2) {
   padding: 0 0 10px 20px;
-}
+} */
 section#right >.right_con_wrap > .right_con > h2{
   margin: 10px auto 0 auto;
   display: block;
@@ -128,7 +128,7 @@ section#right .bar{
   opacity: 0;
   z-index: 66;
   display: none;
-  min-width: 535px;
+  min-width: 540px;
 
 }
 
@@ -155,7 +155,7 @@ section#right .bar li:hover{
   top: 17%;
   height: 73%;
   border: 1px solid #000;
-  min-width: 535px;
+  min-width: 540px;
 
 }
 .active_4 {
