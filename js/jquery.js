@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function(){
          a.classList.add('active_2');
          const newBackgroundImageUrl = 'url(./img/index/web_list_1.png)';
          const webListImages = [
-           'url(./img/index/web_list_1.png)','url(./img/index/web_list_2.png)'
+           'url(./img/index/web_list_1.png)','url(./img/index/web_list_2.png)','url(./img/index/web_list_3.png)'
          ];
          const designListImages = [
            'url(./img/index/design_list_1.png)','url(./img/index/design_list_2.png)','url(./img/index/design_list_3.png)',
@@ -274,6 +274,14 @@ document.addEventListener('DOMContentLoaded', function(){
             document.getElementById('rec_3_wrap').onclick = function() {
             event.preventDefault(); // 기본 동작을 막음
             window.open("./html/game/guess_the_number_game.html", "_blank");
+        };
+      }else if (a == web_list_3) {
+          rec_4_right_2_active_1.textContent = '이니스프리 홈페이지 리뉴얼하여 제작중입니다. 아직 미완성페이지입니다.  '
+            rec_3.style.backgroundImage = webListImages[2];
+            // rec_3_wrap.href = "./html/game/guess_the_number_game.html";
+            document.getElementById('rec_3_wrap').onclick = function() {
+            event.preventDefault(); // 기본 동작을 막음
+            window.open("./html/innisfree/innisfree.html", "_blank");
         };
         }else if (a == design_list_1) {
             rec_3.style.backgroundImage = designListImages[0];

@@ -319,8 +319,12 @@ header ul li a:after{
 }
 
 #page_3{
-  grid-template-rows: 100%;
-  grid-template-columns: 40% 60%;
+  grid-template-rows: 50fr 50fr;
+  grid-template-columns: 42% 58%;
+  grid-template-areas:
+  " aa bb "
+  " cc bb ";
+
 }
 #page_4{
   background:url("../img/index/main7.jpg");
@@ -699,30 +703,75 @@ header ul li a:after{
 }
 
 /* 페이지3 상세 */
-#page_3_left{
-  display: grid;
-  justify-items: center;
-  align-items:center;
+#page_3_left_top{
+  grid-area: aa;
+  display: flex;
+  align-items: center;
+  margin: 80px 0 0 80px;
 }
-#page_3_left > img{
-  width: 600px;
+
+#page_3_left_footer{
+  grid-area: cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sujin_wrap{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+
+  background-image: url(../img/index/sujin.png);
+  background-size: 116%;
+  background-position-x: 80%;
+  background-position-y: 50%;
+}
+
+span#page_3_left_span_1{
+  width: 53%;
+  display: block;
+  margin: 0px 0 0 40px;
+  transition: all 0.5s;
+}
+
+span#page_3_left_span_1 > p{
+  color: #fff;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: justify;
+  transition: all 0.5s;
+}
+
+span#page_3_left_span_2{
+  width: 95%;
+  display: block;
+  color: #fff;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  text-align: justify;
+  transition: all 0.5s;
+    /* margin: 80px 0 0 0; */
+  /* transform: translate(0, 100px); */
+}
+
+#page_3_left > span{
+  color: #fff;
+  grid-area: text;
 }
 #page_3_right{
 	background-color: #161b22;
   position: relative;
+  grid-area: page_3_right;
 }
 #page_3_right_p{
-  color: #fff;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 100;
-  padding: 110px 0px 0 50px;
+
   box-sizing: border-box;
-  font-size: 20px;
-  line-height: 33px;
+
   width: 92%;
-  text-align: justify;
-  transform: translate(0, 100px);
-  transition: all 0.5s;
+
 }
 
 

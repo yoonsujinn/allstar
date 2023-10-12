@@ -816,6 +816,10 @@
     width: 194px;
     height: 162px;
   }
+
+  #page_4>#rec_1 > .rec_4_right > span {
+    display: none;
+  }
   #page_4>#rec_1 > .rec_4_right > p{
     display: none;
   }
