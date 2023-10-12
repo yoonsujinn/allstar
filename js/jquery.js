@@ -18,75 +18,29 @@
   //
   //
 
-document.addEventListener('DOMContentLoaded', function(){
-  // HTML 요소를 선택합니다.
-const skill_obj = document.querySelectorAll("skill_obj");
-const html5 = document.querySelector("#html5");
-const skill_obj_before = document.querySelector(".skill_obj_before");
-const html5_before = document.querySelector("#html5_before");
 
+  document.addEventListener('DOMContentLoaded', function() {
+    const skillObjects = document.querySelectorAll('.skill_obj');
+    // 클래스 요소를 모두 저장 (배열)
 
-  html5.addEventListener("mouseover", function() {
-    html5_before.classList.add("skill_obj_after");
-    // 마우스 오버 이벤트가 발생했을 때 실행할 코드
-});
-  css3.addEventListener("mouseover", function() {
-    css_before.classList.add("skill_obj_after");
-    // 마우스 오버 이벤트가 발생했을 때 실행할 코드
-  });
-  javascript.addEventListener("mouseover", function() {
-    javascript_before.classList.add("skill_obj_after");
-    // 마우스 오버 이벤트가 발생했을 때 실행할 코드
-  });
-  h_jquery.addEventListener("mouseover", function() {
-    jquer_before.classList.add("skill_obj_after");
-    // 마우스 오버 이벤트가 발생했을 때 실행할 코드
-  });
-  c_lan.addEventListener("mouseover", function() {
-    c_lan_before.classList.add("skill_obj_after");
-    // 마우스 오버 이벤트가 발생했을 때 실행할 코드
+    function handleMouseOver(event) { //이벤트 발생시 실행
+      const skillObj = event.currentTarget; //마우스 오버된 요소를 skillobj변수에 저장한다.
+      const skillObjBefore = skillObj.querySelector('.skill_obj_before');//skillObj 내에서 skill_obj_before를 찾아서 저
+      skillObjBefore.classList.add('skill_obj_after'); //skill_obj_before에 skill_obj_after 클래스 추가.
+    }
+
+    function handleMouseOut(event) {
+      const skillObj = event.currentTarget;
+      const skillObjBefore = skillObj.querySelector('.skill_obj_before');
+      skillObjBefore.classList.remove('skill_obj_after');
+    }
+
+    skillObjects.forEach(function(skillObj) { //모든 skillObj 요소들에 대해 반복문 실행
+      skillObj.addEventListener('mouseover', handleMouseOver); //마우스 오버 감지되면 함수 실행
+      skillObj.addEventListener('mouseout', handleMouseOut); //마우스 아웃 감지되면 함수 실행
+    });
   });
 
-  java_lan.addEventListener("mouseover", function() {
-    java_before.classList.add("skill_obj_after");
-    // 마우스 오버 이벤트가 발생했을 때 실행할 코드
-  });
-  react.addEventListener("mouseover", function() {
-    react_before.classList.add("skill_obj_after");
-    // 마우스 오버 이벤트가 발생했을 때 실행할 코드
-  });
-
-html5.addEventListener("mouseout", function() {
-  html5_before.classList.remove("skill_obj_after");
-  // 마우스 아웃 이벤트가 발생했을 때 실행할 코드
-});
-css3.addEventListener("mouseout", function() {
-  css_before.classList.remove("skill_obj_after");
-  // 마우스 아웃 이벤트가 발생했을 때 실행할 코드
-});
-javascript.addEventListener("mouseout", function() {
-  javascript_before.classList.remove("skill_obj_after");
-  // 마우스 아웃 이벤트가 발생했을 때 실행할 코드
-});
-h_jquery.addEventListener("mouseout", function() {
-  jquer_before.classList.remove("skill_obj_after");
-  // 마우스 아웃 이벤트가 발생했을 때 실행할 코드
-});
-
-c_lan.addEventListener("mouseout", function() {
-  c_lan_before.classList.remove("skill_obj_after");
-  // 마우스 아웃 이벤트가 발생했을 때 실행할 코드
-});
-
-java_lan.addEventListener("mouseout", function() {
-  java_before.classList.remove("skill_obj_after");
-  // 마우스 아웃 이벤트가 발생했을 때 실행할 코드
-});
-react.addEventListener("mouseout", function() {
-  react_before.classList.remove("skill_obj_after");
-  // 마우스 아웃 이벤트가 발생했을 때 실행할 코드
-});
-});
 
 
 

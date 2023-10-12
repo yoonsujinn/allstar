@@ -894,28 +894,33 @@ span#page_3_left_span_2:hover{
   background: #e7a020;
 }
 #jquer_before{
-  background: #096aac;
-  border: 5px solid #575757;
+  background: #000;
+  border: 5px solid #096aac;
 }
 #c_lan_before{
-  background: #fff;
+  /* background: #fff; */
   border: 5px solid #8fb5df;
 }
-#c_lan_before > span{
+/* #c_lan_before > span{
   color:#333 !important;
-}
+} */
 #java_before{
-  background: #e76f00;
-  border: 5px solid #5382a1;
+  /* background: #5382a1; */
+  border: 5px solid #e76f00;
 }
 #react_before{
-  background: #00d8ff;
+  background: #111;
+  border: 5px solid #00d8ff;
 }
-#react_before > span{
+/* #react_before > span{
   color:#333 !important;
-}
+} */
 #git_before{
   background: #fff;
+}
+
+#git_before > span{
+  color:#333 !important;
 }
 
 
