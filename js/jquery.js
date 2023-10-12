@@ -18,6 +18,76 @@
   //
   //
 
+document.addEventListener('DOMContentLoaded', function(){
+  // HTML 요소를 선택합니다.
+const skill_obj = document.querySelectorAll("skill_obj");
+const html5 = document.querySelector("#html5");
+const skill_obj_before = document.querySelector(".skill_obj_before");
+const html5_before = document.querySelector("#html5_before");
+
+
+  html5.addEventListener("mouseover", function() {
+    html5_before.classList.add("skill_obj_after");
+    // 마우스 오버 이벤트가 발생했을 때 실행할 코드
+});
+  css3.addEventListener("mouseover", function() {
+    css_before.classList.add("skill_obj_after");
+    // 마우스 오버 이벤트가 발생했을 때 실행할 코드
+  });
+  javascript.addEventListener("mouseover", function() {
+    javascript_before.classList.add("skill_obj_after");
+    // 마우스 오버 이벤트가 발생했을 때 실행할 코드
+  });
+  h_jquery.addEventListener("mouseover", function() {
+    jquer_before.classList.add("skill_obj_after");
+    // 마우스 오버 이벤트가 발생했을 때 실행할 코드
+  });
+  c_lan.addEventListener("mouseover", function() {
+    c_lan_before.classList.add("skill_obj_after");
+    // 마우스 오버 이벤트가 발생했을 때 실행할 코드
+  });
+
+  java_lan.addEventListener("mouseover", function() {
+    java_before.classList.add("skill_obj_after");
+    // 마우스 오버 이벤트가 발생했을 때 실행할 코드
+  });
+  react.addEventListener("mouseover", function() {
+    react_before.classList.add("skill_obj_after");
+    // 마우스 오버 이벤트가 발생했을 때 실행할 코드
+  });
+
+html5.addEventListener("mouseout", function() {
+  html5_before.classList.remove("skill_obj_after");
+  // 마우스 아웃 이벤트가 발생했을 때 실행할 코드
+});
+css3.addEventListener("mouseout", function() {
+  css_before.classList.remove("skill_obj_after");
+  // 마우스 아웃 이벤트가 발생했을 때 실행할 코드
+});
+javascript.addEventListener("mouseout", function() {
+  javascript_before.classList.remove("skill_obj_after");
+  // 마우스 아웃 이벤트가 발생했을 때 실행할 코드
+});
+h_jquery.addEventListener("mouseout", function() {
+  jquer_before.classList.remove("skill_obj_after");
+  // 마우스 아웃 이벤트가 발생했을 때 실행할 코드
+});
+
+c_lan.addEventListener("mouseout", function() {
+  c_lan_before.classList.remove("skill_obj_after");
+  // 마우스 아웃 이벤트가 발생했을 때 실행할 코드
+});
+
+java_lan.addEventListener("mouseout", function() {
+  java_before.classList.remove("skill_obj_after");
+  // 마우스 아웃 이벤트가 발생했을 때 실행할 코드
+});
+react.addEventListener("mouseout", function() {
+  react_before.classList.remove("skill_obj_after");
+  // 마우스 아웃 이벤트가 발생했을 때 실행할 코드
+});
+});
+
 
 
 
@@ -34,9 +104,9 @@
     const page_3_right_tag = document.querySelector('.page_3_right_tag');
 
 
-
-    console.log(scrollY);
-    console.log(pageNumber);
+    //
+    // console.log(scrollY);
+    // console.log(pageNumber);
 
     // 0페이지일때
     if ( pageNumber == 0) {
@@ -55,9 +125,9 @@
         // 1페이지일때
     // } else if (pageNumber > 0.9 || pageNumber >= 1.9) {
     } else if (pageNumber == 1 ) {
-
-      page_3_right_p.style.transform = 'translate(0%, 100px)';
-      page_3_right_tag.style.transform = 'translate(0%, 100px)';
+      //
+      // page_3_right_p.style.transform = 'translate(0%, 100px)';
+      // page_3_right_tag.style.transform = 'translate(0%, 100px)';
 
         profile_li.forEach((li) => {
             li.style.transform = 'translate(0%, 0%)';
@@ -75,8 +145,8 @@
     // } else if (pageNumber >= 2 || pageNumber == 3 || pageNumber == 4) {
   } else if (pageNumber == 2) {
 
-        page_3_right_p.style.transform = 'translate(0%, 0%)';
-        page_3_right_tag.style.transform = 'translate(0%, 0%)';
+        // page_3_right_p.style.transform = 'translate(0%, 0%)';
+        // page_3_right_tag.style.transform = 'translate(0%, 0%)';
 
         profile_li.forEach((li) => {
             li.style.transform = 'translate(90%, 0%)';
@@ -92,8 +162,8 @@
             e.style.opacity = '0'; // opacity 속성 변경
         });
     }else if (pageNumber == 3) {
-      page_3_right_p.style.transform = 'translate(0%, 100px)';
-      page_3_right_tag.style.transform = 'translate(0%, 100px)';
+      // page_3_right_p.style.transform = 'translate(0%, 100px)';
+      // page_3_right_tag.style.transform = 'translate(0%, 100px)';
 
           profile_li.forEach((li) => {
               li.style.transform = 'translate(90%, 0%)';
@@ -205,7 +275,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
           if (s==page_4_li_2) {
-            console.log(s);
+
             rec_3.style.cursor = 'auto';
             rec_4_right_2_active_2.textContent = '직접 디자인하여 제작한 이미지입니다. 마케팅업무를 위해 제작한 이미지와 포트폴리오 작업에 필요한 이미지들을 제작하였습니다.';
             rec_3_wrap.addEventListener('click', function(event) {
