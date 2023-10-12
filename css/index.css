@@ -752,6 +752,7 @@ span#page_3_left_span_2{
   font-weight: 300;
   text-align: justify;
   transition: all 0.5s;
+  line-height: 1.1;
   /* transform: translate(0, 100px); */
 }
 
@@ -803,7 +804,7 @@ span#page_3_left_span_2:hover{
   transition: all 0.5s;
   position: relative;
   float: left;
-  margin: 0 130px 70px 0;
+  margin: 0 130px 15px 0;
 }
 
 #html5{
@@ -870,7 +871,7 @@ span#page_3_left_span_2:hover{
   height: 180px;
   border-radius: 50%;
   position: absolute;
-  top: 21%;
+  top: 15%;
   opacity: 0;
   left: -20%;
   transition: all 0.5s;
@@ -934,7 +935,7 @@ span#page_3_left_span_2:hover{
   transform: scale(1);
   opacity: 1;
   left: 30%;
-  top: 21%;
+  top: 15%;
 }
 
 .per{
