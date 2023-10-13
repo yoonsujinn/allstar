@@ -45,112 +45,112 @@
 
 
 
-  window.addEventListener("scroll", function() {
-
-
-    var scrollY = window.scrollY; // 수직 스크롤 위치
-    var pageNumber = scrollY / window.innerHeight;
-
-    const profile_li = document.querySelectorAll('.profile_li');
-    const page_2_Certificate = document.querySelectorAll('.page_2_Certificate');
-    const page_2_work = document.querySelectorAll('.page_2_work');
-    const page_3_right_p = document.querySelector('#page_3_right_p');
-    const page_3_right_tag = document.querySelector('.page_3_right_tag');
-
+  // window.addEventListener("scroll", function() {
+  //
+  //
+  //   var scrollY = window.scrollY; // 수직 스크롤 위치
+  //   var pageNumber = scrollY / window.innerHeight;
+  //
+  //   const profile_li = document.querySelectorAll('.profile_li');
+  //   const page_2_Certificate = document.querySelectorAll('.page_2_Certificate');
+  //   const page_2_work = document.querySelectorAll('.page_2_work');
+  //   const page_3_right_p = document.querySelector('#page_3_right_p');
+  //   const page_3_right_tag = document.querySelector('.page_3_right_tag');
+  //
 
     //
     // console.log(scrollY);
     // console.log(pageNumber);
 
     // 0페이지일때
-    if ( pageNumber == 0) {
-        profile_li.forEach((li) => {
-            li.style.transform = 'translate(90%, 0%)';
-            li.style.opacity = '0';
-        });
-        page_2_Certificate.forEach((obj) => {
-            obj.style.transform = 'translate(9%, 0%)'; // transform 속성 변경
-            obj.style.opacity = '0'; // opacity 속성 변경
-        });
-        page_2_work.forEach((e) => {
-            e.style.transform = 'translate(10%, 0%)'; // transform 속성 변경
-            e.style.opacity = '0'; // opacity 속성 변경
-        });
-        // 1페이지일때
-    // } else if (pageNumber > 0.9 || pageNumber >= 1.9) {
-    } else if (pageNumber == 1 ) {
-      //
-      // page_3_right_p.style.transform = 'translate(0%, 100px)';
-      // page_3_right_tag.style.transform = 'translate(0%, 100px)';
-
-        profile_li.forEach((li) => {
-            li.style.transform = 'translate(0%, 0%)';
-            li.style.opacity = '1';
-        });
-        page_2_Certificate.forEach((obj) => {
-            obj.style.transform = 'translate(0%, 0%)'; // transform 속성 변경
-            obj.style.opacity = '1'; // opacity 속성 변경
-        });
-        page_2_work.forEach((e) => {
-            e.style.transform = 'translate(0%, 0%)'; // transform 속성 변경
-            e.style.opacity = '1'; // opacity 속성 변경
-        });
-        // 2~3페이지일때
-    // } else if (pageNumber >= 2 || pageNumber == 3 || pageNumber == 4) {
-  } else if (pageNumber == 2) {
-
-        // page_3_right_p.style.transform = 'translate(0%, 0%)';
-        // page_3_right_tag.style.transform = 'translate(0%, 0%)';
-
-        profile_li.forEach((li) => {
-            li.style.transform = 'translate(90%, 0%)';
-            li.style.opacity = '0';
-        });
-        page_2_Certificate.forEach((obj) => {
-            obj.style.transform = 'translate(9%, 0%)'; // transform 속성 변경
-            obj.style.opacity = '0'; // opacity 속성 변경
-
-        });
-        page_2_work.forEach((e) => {
-            e.style.transform = 'translate(10%, 0%)'; // transform 속성 변경
-            e.style.opacity = '0'; // opacity 속성 변경
-        });
-    }else if (pageNumber == 3) {
-      // page_3_right_p.style.transform = 'translate(0%, 100px)';
-      // page_3_right_tag.style.transform = 'translate(0%, 100px)';
-
-          profile_li.forEach((li) => {
-              li.style.transform = 'translate(90%, 0%)';
-              li.style.opacity = '0';
-          });
-          page_2_Certificate.forEach((obj) => {
-              obj.style.transform = 'translate(9%, 0%)'; // transform 속성 변경
-              obj.style.opacity = '0'; // opacity 속성 변경
-
-          });
-          page_2_work.forEach((e) => {
-              e.style.transform = 'translate(10%, 0%)'; // transform 속성 변경
-              e.style.opacity = '0'; // opacity 속성 변경
-          });
-      }
-      else if (pageNumber == 4) {
-
-            profile_li.forEach((li) => {
-                li.style.transform = 'translate(90%, 0%)';
-                li.style.opacity = '0';
-            });
-            page_2_Certificate.forEach((obj) => {
-                obj.style.transform = 'translate(9%, 0%)'; // transform 속성 변경
-                obj.style.opacity = '0'; // opacity 속성 변경
-
-            });
-            page_2_work.forEach((e) => {
-                e.style.transform = 'translate(10%, 0%)'; // transform 속성 변경
-                e.style.opacity = '0'; // opacity 속성 변경
-            });
-        }
-
-});
+//     if ( pageNumber == 0) {
+//         // profile_li.forEach((li) => {
+//         //     li.style.transform = 'translate(90%, 0%)';
+//         //     li.style.opacity = '0';
+//         // });
+//         page_2_Certificate.forEach((obj) => {
+//             obj.style.transform = 'translate(9%, 0%)'; // transform 속성 변경
+//             obj.style.opacity = '0'; // opacity 속성 변경
+//         });
+//         page_2_work.forEach((e) => {
+//             e.style.transform = 'translate(10%, 0%)'; // transform 속성 변경
+//             e.style.opacity = '0'; // opacity 속성 변경
+//         });
+//         // 1페이지일때
+//     // } else if (pageNumber > 0.9 || pageNumber >= 1.9) {
+//     } else if (pageNumber == 1 ) {
+//       //
+//       // page_3_right_p.style.transform = 'translate(0%, 100px)';
+//       // page_3_right_tag.style.transform = 'translate(0%, 100px)';
+//         //
+//         // profile_li.forEach((li) => {
+//         //     li.style.transform = 'translate(0%, 0%)';
+//         //     li.style.opacity = '1';
+//         // });
+//         page_2_Certificate.forEach((obj) => {
+//             obj.style.transform = 'translate(0%, 0%)'; // transform 속성 변경
+//             obj.style.opacity = '1'; // opacity 속성 변경
+//         });
+//         page_2_work.forEach((e) => {
+//             e.style.transform = 'translate(0%, 0%)'; // transform 속성 변경
+//             e.style.opacity = '1'; // opacity 속성 변경
+//         });
+//         // 2~3페이지일때
+//     // } else if (pageNumber >= 2 || pageNumber == 3 || pageNumber == 4) {
+//   } else if (pageNumber == 2) {
+//
+//         // page_3_right_p.style.transform = 'translate(0%, 0%)';
+//         // page_3_right_tag.style.transform = 'translate(0%, 0%)';
+//
+//         // profile_li.forEach((li) => {
+//         //     li.style.transform = 'translate(90%, 0%)';
+//         //     li.style.opacity = '0';
+//         // });
+//         page_2_Certificate.forEach((obj) => {
+//             obj.style.transform = 'translate(9%, 0%)'; // transform 속성 변경
+//             obj.style.opacity = '0'; // opacity 속성 변경
+//
+//         });
+//         page_2_work.forEach((e) => {
+//             e.style.transform = 'translate(10%, 0%)'; // transform 속성 변경
+//             e.style.opacity = '0'; // opacity 속성 변경
+//         });
+//     }else if (pageNumber == 3) {
+//       // page_3_right_p.style.transform = 'translate(0%, 100px)';
+//       // page_3_right_tag.style.transform = 'translate(0%, 100px)';
+//           //
+//           // profile_li.forEach((li) => {
+//           //     li.style.transform = 'translate(90%, 0%)';
+//           //     li.style.opacity = '0';
+//           // });
+//           page_2_Certificate.forEach((obj) => {
+//               obj.style.transform = 'translate(9%, 0%)'; // transform 속성 변경
+//               obj.style.opacity = '0'; // opacity 속성 변경
+//
+//           });
+//           page_2_work.forEach((e) => {
+//               e.style.transform = 'translate(10%, 0%)'; // transform 속성 변경
+//               e.style.opacity = '0'; // opacity 속성 변경
+//           });
+//       }
+//       else if (pageNumber == 4) {
+//
+//             // profile_li.forEach((li) => {
+//             //     li.style.transform = 'translate(90%, 0%)';
+//             //     li.style.opacity = '0';
+//             // });
+//             page_2_Certificate.forEach((obj) => {
+//                 obj.style.transform = 'translate(9%, 0%)'; // transform 속성 변경
+//                 obj.style.opacity = '0'; // opacity 속성 변경
+//
+//             });
+//             page_2_work.forEach((e) => {
+//                 e.style.transform = 'translate(10%, 0%)'; // transform 속성 변경
+//                 e.style.opacity = '0'; // opacity 속성 변경
+//             });
+//         }
+//
+// });
 
 document.addEventListener('DOMContentLoaded', function(){
   // 왼쪽 상단 메뉴 버튼 클릭
