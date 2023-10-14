@@ -1036,23 +1036,22 @@ span#page_3_left_span_2:hover{
   opacity: 1  !important;
 }
  #rec_3{
-  background: #888;
-  transform: rotate(45deg);
-  width: 400px;
-  height: 400px;
-  position: absolute;
-  left: 400px;
-  top: 84px;
-  -webkit-text-stroke-width: 3px !important;
-  transition: all 0.5s !important;
-  opacity: 1  !important;
-  background-color: #000;
-  background-image: url("../img/index/rec_3_img_1.gif");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position-y: 50%;
-  background-position-x: 50%;
-  cursor: pointer;
+   width: 400px;
+   height: 400px;
+   position: absolute;
+   left: 40%;
+   top: 70%;
+   transform: translate(-50%,-50%) rotate(45deg);
+   transition: all 0.5s !important;
+   opacity: 1  !important;
+   background-color: #000;
+   background-image: url("../img/index/rec_3_img_1.gif");
+   background-size: 100%;
+   background-repeat: no-repeat;
+   background-position-y: 50%;
+   background-position-x: 50%;
+   cursor: pointer;
+   -webkit-text-stroke-width: 3px !important;
 }
 /*
  #rec_3:after{
@@ -1070,7 +1069,7 @@ span#page_3_left_span_2:hover{
     position: absolute;
     bottom: -226px;
     left: 150%;
-    width: 500px;
+    width: 33%;
     height: 271px;
     transition: all 0.8s ease;
     display: flex;
@@ -1108,7 +1107,7 @@ span#page_3_left_span_2:hover{
   font-family: 'Noto Sans KR', sans-serif;
   font-style: italic;
   font-weight: 300;
-  text-align: left;
+  text-align: right;
   font-size: 17px;
   transition: all 0.5s ease;
   }
