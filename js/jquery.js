@@ -37,7 +37,7 @@
 
     skillObjects.forEach(function(skillObj) { //모든 skillObj 요소들에 대해 반복문 실행
       skillObj.addEventListener('mouseover', handleMouseOver); //마우스 오버 감지되면 함수 실행
-      // skillObj.addEventListener('mouseout', handleMouseOut); //마우스 아웃 감지되면 함수 실행
+      skillObj.addEventListener('mouseout', handleMouseOut); //마우스 아웃 감지되면 함수 실행
     });
   });
 

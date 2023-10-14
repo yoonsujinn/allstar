@@ -736,7 +736,7 @@ justify-content: center;
   grid-area: cc;
   display: flex;
   justify-content: center;
-  margin: 30px 0 0 80px;
+  margin: 30px 30px 0 80px;
 }
 
 .sujin_wrap{
@@ -774,7 +774,6 @@ span#page_3_left_span_2{
   font-weight: 300;
   text-align: justify;
   transition: all 0.5s;
-  line-height: 1.1;
   /* transform: translate(0, 100px); */
 }
 
@@ -838,42 +837,50 @@ span#page_3_left_span_2:hover{
   background: url('../img/index/html5.png');
   background-size: 100%;
   background-repeat: no-repeat;
+  background-position: center;
 }
-#css3{
-  background: url('../img/index/CSS3.png');
+#h_css3{
+  background: url('../img/index/css3.png');
   background-size: 100%;
   background-repeat: no-repeat;
+  background-position: center;
 }
 #javascript{
   background: url('../img/index/js.png');
   background-size: 100%;
   background-repeat: no-repeat;
+  background-position: center;
 
 }
 #h_jquery{
   background: url('../img/index/jquery.png');
   background-size: 100%;
   background-repeat: no-repeat;
+  background-position: center;
 }
 #c_lan{
   background: url('../img/index/c_lan.png');
   background-size: 100%;
   background-repeat: no-repeat;
+  background-position: center;
 }
 #java_lan{
   background: url('../img/index/java.png');
   background-size: 100%;
   background-repeat: no-repeat;
+  background-position: center;
 }
 #react{
   background: url('../img/index/react.png');
   background-size: 100%;
   background-repeat: no-repeat;
+  background-position: center;
 }
 #git{
   background: url('../img/index/git.png');
   background-size: 100%;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .skill_obj_before{
