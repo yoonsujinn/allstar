@@ -400,22 +400,3 @@ window.addEventListener("scroll", function(event) {
     window.scrollTo(0, innerHeight); //window.scrollTo는 스크롤의 위치를 변경한다.
   }
 });
-// querySelectorAll('.potfolio_list');
-
-
-        // // 자바스크립트 모바일 메뉴 온/오프
-        // document.addEventListener('DOMContentLoaded', function(){
-        //
-        //   var design_list_3  = document.querySelectorAll('.design_list_3');
-        //   // 왼쪽 상단 메뉴 버튼 클릭
-        //
-        //       document.querySelector('.design_list_3').classList.contains('active_2') ){
-        //         //disign_contaner_nav_active
-        //         document.querySelector('.disign_contaner').classList.remove('disign_contaner_nav_active');
-        //
-        //       } else {
-        //         //메뉴펼처짐
-        //         document.querySelector('.disign_contaner').classList.add('disign_contaner_nav_active');
-        //
-        //       }
-        //     });

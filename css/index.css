@@ -30,10 +30,9 @@ html, body{
   width:100%;
 	height:100%;
   font-family: 'MonaSans';
-
   min-width: 375px;
-  scroll-snap-type: y mandatory;
-  transition: all 0.8s linear;
+  /* scroll-snap-type: y mandatory;
+  transition: all 0.8s linear; */
 
 }
 
@@ -109,8 +108,8 @@ html, body{
   width: 78%;
   background-color: rgba(10, 10, 21 , 0.8);
   transition: 0.8s;
-  left: -111%;
-  opacity: 0;
+  right: -111%;
+  /* opacity: 0; */
   z-index: 9999;
   display: grid;
   grid-template-rows: 70px auto 50px;
@@ -156,7 +155,7 @@ html, body{
 }
 
 .disign_contaner_nav_active{
-  left: 0;
+  right: 0;
   opacity: 1;
 }
 
@@ -216,16 +215,16 @@ html, body{
 }
 
 header{
-	position: fixed;
-	width: 100%;
-	height: 80px;
+  position: fixed;
+  width: 100%;
+  height: 80px;
   display: grid;
-  grid-template-columns:3fr 7fr;
-  place-items:center;
+  grid-template-columns: 3fr 7fr;
+  place-items: center;
   z-index: 5555;
-
-
-
+  /* background: rgba(226, 226, 226, 0.2); */
+  box-sizing: border-box;
+  border-bottom: 2px solid #222;
 }
 header >h2{
   font-size: 32px;
@@ -250,6 +249,10 @@ header ul{
 
 header ul li{
   place-items:center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 header ul li a{
@@ -261,26 +264,25 @@ header ul li a{
   z-index: 555555;
 }
 
-header ul li a:hover{
+header ul li:hover a{
   font-weight: bold;
+  text-align: center;
 }
 
-header ul li a:hover:after{
+ header ul li a:hover:after{
   opacity: 1;
   width: 100%;
   -webkit-transition: all 3s;
   transition: all 0.3s;
+  left: -1%;
 }
-
 header ul li a:after{
   content: '';
   opacity: 0;
   width: 1%;
   height: 4px;
-  background: red;
   position: absolute;
-  bottom: -13%;
-  left: 0;
+  bottom: -75%;
   -webkit-transition: all 200ms;
   transition: all 200ms;
   background: linear-gradient(140deg, #D2A8FF 12.09%, #F778BA 42.58%, #FF7B72 84.96%);
@@ -295,7 +297,7 @@ header ul li a:after{
   display: grid;
   overflow:hidden;
   transition: all 0.8s linear;
-   scroll-snap-align: start;
+  scroll-snap-align: start;
 }
 
 
@@ -306,21 +308,21 @@ header ul li a:after{
 }
 
 
-#page_1{
+#page_1_HOME{
   grid-template-rows: 1fr;
   grid-template-columns: 6fr 6fr;
-  background: #282c34
+  background: #000;
 
 }
 
-#page_2{
+#page_2_about_me{
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;
   padding: 80px 0 0 0;
 
 }
 
-#page_3{
+#page_3_iam {
   grid-template-rows: 43fr 57fr;
   grid-template-columns: 51% 49%;
   grid-template-areas:
@@ -328,7 +330,7 @@ header ul li a:after{
   " cc bb ";
 
 }
-#page_4{
+#page_4_Portfolio{
   background:url("../img/index/main7.jpg");
   background-size: cover;
   place-items: center;
@@ -337,7 +339,7 @@ header ul li a:after{
   height:100%;
 }
 
-#page_4::before{
+#page_4_Portfolio::before{
   content: "";
   width: 100%;
   height: 100%;
@@ -485,10 +487,10 @@ header ul li a:after{
   transform: translate(0, -50%);
 }
 
-#page_1_right{
+#page_1_right {
   position: relative;
   display: flex;
-  align-items: flex-start;
+  align-items: start;
   flex-direction: column;
   justify-content: center;
 }
@@ -714,13 +716,13 @@ justify-content: center;
   /* transform: translate(10%, 0%); */
   /* opacity: 0; */
   transition: all 0.5s;
+  gap: 10px;
 
 }
 
 #page_2_right_wrap > .page_2_work > li {
   color: #fff;
   font-size: 18px;
-  padding: 0 0 5px 0;
 
 }
 
@@ -982,7 +984,7 @@ span#page_3_left_span_2:hover{
 /* 페이지4 상세 */
 
 
-#page_4 > #rec_1{
+#rec_1{
   /* background: red; */
   background: url(../img/index/page4_rac_1.png);
   width: 84%;
@@ -994,7 +996,7 @@ span#page_3_left_span_2:hover{
   justify-items: center;
   align-items: end;
 }
-#page_4>#rec_1>#rec_2{
+#rec_1>#rec_2{
   background: #000;
   width: 86%;
   height: 150%;
@@ -1002,16 +1004,13 @@ span#page_3_left_span_2:hover{
   bottom: -60%;
 
 }
-
-#page_4>#rec_1 > ul{
+#rec_1 > ul{
   /* background: red; */
   position: absolute;
   top: 20px;
   left: 30px;
-
 }
-
-#page_4>#rec_1 > ul li.page_4_li {
+#rec_1 > ul li.page_4_li {
   font-size: 60px;
   font-weight: bold;
   font-family: 'Rubik Iso', cursive;
@@ -1025,18 +1024,7 @@ span#page_3_left_span_2:hover{
   -webkit-transition: all 2s ease;
   opacity: 0.6;
 }
-/* #page_4>#rec_1 > ul li.page_4_li:after{
-  content: '';
-  position: relative;
-  width: 100%;
-  height: 4px;
-  background: red;
-  position: absolute;
-  bottom: 10%;
-  left: 0;
-  -webkit-transition: all 200ms;
-  transition: all 200ms;
-  } */
+
 .active_1{
   -webkit-text-stroke-width: 3px !important;
   transition: all 2s !important;
@@ -1046,7 +1034,7 @@ span#page_3_left_span_2:hover{
    width: 400px;
    height: 400px;
    position: absolute;
-   left: 40%;
+   left: 67%;
    top: 70%;
    transform: translate(-50%,-50%) rotate(45deg);
    transition: all 0.5s !important;
@@ -1072,10 +1060,10 @@ span#page_3_left_span_2:hover{
    left: 0;
  } */
 
-  #page_4>#rec_1 > .rec_4_right{
+  #page_4_Portfolio > #rec_1 > .rec_4_right{
     position: absolute;
     bottom: -226px;
-    left: 150%;
+    left: -65%;
     width: 33%;
     height: 271px;
     transition: all 0.8s ease;
@@ -1084,14 +1072,14 @@ span#page_3_left_span_2:hover{
   }
   .active3{
     display: block;
-    left: 65% !important;
+    left: 2% !important;
     transition: all 0.5s !important;
     opacity: 1  !important;
   }
 
 
 
-  #page_4>#rec_1 > .rec_4_right > p{
+  #rec_1 > .rec_4_right > p{
     color: #fff;
     font-family: 'Noto Sans KR', sans-serif;
     text-align: justify;
@@ -1106,25 +1094,23 @@ span#page_3_left_span_2:hover{
 
   }
 
-#page_4>#rec_1 > .rec_4_right > p::-webkit-scrollbar {
+#rec_1 > .rec_4_right > p::-webkit-scrollbar {
   display: none; /* 크롬, 사파리, 오페라 */
 }
-#page_4>#rec_1 > .rec_4_right > span{
+#rec_1 > .rec_4_right > span{
   color: #ff5e82;
   font-family: 'Noto Sans KR', sans-serif;
   font-style: italic;
   font-weight: 300;
-  text-align: right;
   font-size: 17px;
   transition: all 0.5s ease;
   }
 
-#page_4>#rec_1 > .rec_4_right > ul li.potfolio_list{
+#rec_1 > .rec_4_right > ul li.potfolio_list{
   color: #3e79f1;
   font-family: 'Noto Sans KR', sans-serif;
   font-style: italic;
   font-weight: 400;
-  text-align: right;
   font-size: 21px;
   transition: all 0.5s ease;
   cursor: pointer;
@@ -1140,14 +1126,14 @@ span#page_3_left_span_2:hover{
 
 /* 5page 시작 */
 
-#page_5 {
+#page_5_Contact {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 90px 2fr;
   background-color: #000;
   font-size: 32px;
 }
-#page_5 > span{
+#page_5_Contact > span{
   color:#fff;
   font-family: 'Mona Sans';
   display: inline-block;
@@ -1155,14 +1141,14 @@ span#page_3_left_span_2:hover{
   align-self:center;
   justify-Self:right;
 }
-#page_5 > .page_5_left{
+ .page_5_left{
   display: grid;
   justify-content: center;
   align-content: center;
   grid-template-rows: auto 12% auto;
 }
 
-#page_5 > .page_5_left > .page_5_con{
+ .page_5_left > .page_5_con{
   background: #000;
   border: 2px solid #fff;
   width: 715px;
@@ -1194,8 +1180,6 @@ span#page_3_left_span_2:hover{
   width: 55px;
 }
 
-
-
 .page_5_con  a p{
   display: block;
   color:#fff;
@@ -1203,11 +1187,11 @@ span#page_3_left_span_2:hover{
   font-family: 'Mona Sans';
 }
 
-#page_5 > .page_5_left > h3{
+.page_5_left > h3{
   display: none;
 }
 
-#page_5 > .page_5_left > h2{
+ .page_5_left > h2{
   display: block;
   color: #fff;
   align-self: center;
@@ -1216,9 +1200,6 @@ span#page_3_left_span_2:hover{
   font-weight: 100;
   text-align: center;
 }
-
-
-
 .page_5_con_before{
   position: relative;
   top: -83%;

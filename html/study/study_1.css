@@ -544,6 +544,9 @@ h1{
     section#right .bar {
       width: 95%;
     }
+    section#right .bar li {
+    font-size: 17px;
+}
 
     section#left nav{
       width: 400px;
