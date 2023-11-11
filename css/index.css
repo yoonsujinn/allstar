@@ -31,8 +31,8 @@ html, body{
 	height:100%;
   font-family: 'MonaSans';
   min-width: 375px;
-  /* scroll-snap-type: y mandatory;
-  transition: all 0.8s linear; */
+  scroll-snap-type: y mandatory;
+  transition: all 0.8s linear;
 
 }
 
@@ -45,6 +45,8 @@ html, body{
   z-index: 99999;
   transition: left 0.2s;
   transition-timing-function: linear;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .mobile_side_menu {
   display: none;
@@ -268,25 +270,28 @@ header ul li:hover a{
   font-weight: bold;
   text-align: center;
 }
+header ul li a:after{
+
+  content: '';
+  opacity: 0;
+  width: 1%;
+  height: 4px;
+  position: absolute;
+  left: -0%;
+  bottom: -75%;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  background: linear-gradient(140deg, #D2A8FF 12.09%, #F778BA 42.58%, #FF7B72 84.96%);
+}
 
  header ul li a:hover:after{
   opacity: 1;
   width: 100%;
   -webkit-transition: all 3s;
   transition: all 0.3s;
-  left: -1%;
+  left: -0%;
 }
-header ul li a:after{
-  content: '';
-  opacity: 0;
-  width: 1%;
-  height: 4px;
-  position: absolute;
-  bottom: -75%;
-  -webkit-transition: all 200ms;
-  transition: all 200ms;
-  background: linear-gradient(140deg, #D2A8FF 12.09%, #F778BA 42.58%, #FF7B72 84.96%);
-}
+
 
 .pages{
   width:100%;
@@ -298,6 +303,7 @@ header ul li a:after{
   overflow:hidden;
   transition: all 0.8s linear;
   scroll-snap-align: start;
+  min-width: 385px;
 }
 
 
@@ -683,7 +689,7 @@ header ul li a:after{
   font-family: 'MonaSans';
   line-height: 1.7;
   /* transform: translate(90%, 0%); */
-  /* opacity: 0; */
+  opacity: 1;
   transition: all 0.5s;
 }
 
@@ -717,7 +723,7 @@ header ul li a:after{
   /* transform: translate(10%, 0%); */
   /* opacity: 0; */
   transition: all 0.5s;
-  gap: 10px;
+  gap: 20px;
 
 }
 
@@ -732,7 +738,7 @@ header ul li a:after{
   grid-area: aa;
   display: flex;
   align-items: center;
-  margin: 80px 0 0 80px;
+  margin: 100px 0 0 80px;
 }
 
 #page_3_left_footer{
@@ -743,8 +749,8 @@ header ul li a:after{
 }
 
 .sujin_wrap{
-  width: 300px;
-  height: 300px;
+  width: 260px;
+  height: 260px;
   border-radius: 50%;
   background-image: url(../img/index/sujin.png);
   background-size: 116%;
@@ -752,14 +758,14 @@ header ul li a:after{
   background-position-y: 50%;
 }
 
-span#page_3_left_span_1{
+#page_3_left_span_1{
   width: 53%;
   display: block;
   margin: 0px 0 0 40px;
   transition: all 0.5s;
 }
 
-span#page_3_left_span_1 > p{
+#page_3_left_span_1 > p{
   color: #fff;
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 24px;
@@ -824,7 +830,7 @@ span#page_3_left_span_2:hover{
 
 #page_3_right > .page_3_right_tag{
   width: 95%;
-  height: 71%;
+  height: 58%;
   /* background: #222; */
   margin: 20px 0 0 0;
   /* border: 1px solid #fff; */
@@ -847,50 +853,50 @@ span#page_3_left_span_2:hover{
   background: url('../img/index/html5.png');
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position: center;
+  
 }
 #h_css3{
   background: url('../img/index/css3.png');
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position: center;
+  
 }
 #javascript{
   background: url('../img/index/js.png');
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position: center;
+  
 
 }
 #h_jquery{
   background: url('../img/index/jquery.png');
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position: center;
+  
 }
 #c_lan{
   background: url('../img/index/c_lan.png');
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position: center;
+  
 }
 #java_lan{
   background: url('../img/index/java.png');
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position: center;
+  
 }
 #react{
   background: url('../img/index/react.png');
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position: center;
+  
 }
 #git{
   background: url('../img/index/git.png');
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position: center;
+  
 }
 
 .skill_obj_before{
@@ -1070,7 +1076,7 @@ span#page_3_left_span_2:hover{
 
   #page_4_Portfolio > #rec_1 > .rec_4_right{
     position: absolute;
-    bottom: -226px;
+    bottom: -240px;
     left: -65%;
     width: 33%;
     height: 271px;
